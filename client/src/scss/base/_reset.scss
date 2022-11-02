@@ -1,4 +1,5 @@
 @use '../abstracts' as ab;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -11,7 +12,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: ab.$fs-default;
 }
 
@@ -24,6 +25,7 @@ input,
 button {
   display: inline-block;
   font-size: inherit;
+  color: inherit;
 }
 
 a {
