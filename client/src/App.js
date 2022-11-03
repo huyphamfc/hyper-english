@@ -1,11 +1,12 @@
 import React from 'react';
 
 import { GlobalStyles } from './components';
-import { Carousel } from './layouts';
+import { Header, Carousel } from './layouts';
 
 function App() {
   return (
     <GlobalStyles>
+      <Header />
       <main>
         <Carousel />
       </main>

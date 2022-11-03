@@ -8,9 +8,7 @@ function Carousel() {
     <section className={style.carousel}>
       <div className={style.carousel__container}>
         <div className={style.carousel__text}>
-          <h2 className={style.carousel__heading}>
-            The effective way to learn English for IT
-          </h2>
+          <h2 className={style.carousel__heading}>English for IT</h2>
           <p className={style.carousel__paragraph}>
             The English Vocabulary series that are suitable for students and
             teachers in Information Technology.
