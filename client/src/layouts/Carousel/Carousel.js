@@ -1,7 +1,6 @@
 import React from 'react';
 
 import style from './Carousel.module.scss';
-import img from '../../assets/images/carousel-illustration.svg';
 import { Button } from '../../components';
 
 function Carousel() {
@@ -16,14 +15,12 @@ function Carousel() {
             The English Vocabulary series that are suitable for students and
             teachers in Information Technology.
           </p>
-          <div className={style.carousel__buttons}>
+          <div className={style.carousel__actions}>
             <Button solid>Get Started</Button>
             <Button outline>Learn more &darr;</Button>
           </div>
         </div>
-        <div className={style.carousel__img}>
-          <img src={img} alt="The Earth" />
-        </div>
+        <div className={style.carousel__img} />
       </div>
     </section>
   );
