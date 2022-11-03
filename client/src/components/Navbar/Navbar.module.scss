@@ -1,0 +1,25 @@
+@use '../../scss/abstracts' as ab;
+
+.navbar {
+  @include ab.flex(row, space-between, center, 2.4rem);
+}
+
+@media (max-width: 54em) {
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background-color: ab.$color-accent;
+    padding: 3.2rem 0;
+  }
+
+  .show {
+    display: flex;
+  }
+}
