@@ -5,12 +5,11 @@
   color: ab.$color-gray-very-light;
 
   .header__nav {
-    @extend %container;
+    @extend %wrapper;
     @include ab.flex(row, space-between, center);
     flex-wrap: wrap;
 
     font-size: 1.8rem;
-
     background-color: ab.$color-accent;
   }
 
@@ -27,18 +26,15 @@
 }
 
 .show {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   min-height: 100vh;
 }
 
 @media (max-width: 54em) {
   .header {
-    .header__nav {
-      position: relative;
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 
     .header__toggle {
       display: block;

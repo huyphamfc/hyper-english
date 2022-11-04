@@ -9,7 +9,7 @@
   background-image: url('../../assets/images/carousel-background.svg');
 
   .carousel__container {
-    @extend %container;
+    @extend %wrapper;
 
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -30,8 +30,6 @@
   }
 
   .carousel__img {
-    height: 100%;
-
     background-image: url('../../assets/images/carousel-illustration.svg');
     background-size: contain;
     background-repeat: no-repeat;
