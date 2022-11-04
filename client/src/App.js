@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { GlobalStyles } from './components';
-import { Header, Carousel } from './layouts';
+import { Header, Carousel, About } from './layouts';
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <Header />
       <main>
         <Carousel />
+        <About />
       </main>
     </GlobalStyles>
   );
