@@ -9,6 +9,7 @@ function Button({
   solid,
   outline,
   transparent,
+  round,
   iconLeft,
   iconRight,
   onClick,
@@ -18,6 +19,7 @@ function Button({
     [style.solid]: solid,
     [style.outline]: outline,
     [style.transparent]: transparent,
+    [style.round]: round,
   });
 
   return (
@@ -38,6 +40,7 @@ Button.propTypes = {
   solid: PropTypes.bool,
   outline: PropTypes.bool,
   transparent: PropTypes.bool,
+  round: PropTypes.bool,
   iconLeft: PropTypes.element,
   iconRight: PropTypes.element,
   onClick: PropTypes.func,
@@ -49,6 +52,7 @@ Button.defaultProps = {
   solid: false,
   outline: false,
   transparent: false,
+  round: false,
   iconLeft: null,
   iconRight: null,
   onClick: null,

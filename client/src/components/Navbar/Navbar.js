@@ -25,7 +25,9 @@ function Navbar({ className }) {
         <Button transparent>Contact</Button>
       </li>
       <li>
-        <Button solid>Join</Button>
+        <Button solid round>
+          Join
+        </Button>
       </li>
     </ul>
   );
