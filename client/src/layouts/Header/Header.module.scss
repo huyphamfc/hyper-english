@@ -9,7 +9,6 @@
     @include ab.flex(row, space-between, center);
     flex-wrap: wrap;
 
-    font-size: 1.8rem;
     background-color: ab.$color-accent;
   }
 

@@ -7,6 +7,7 @@ import {
   Carousel,
   About,
   Mission,
+  Testimonial,
 } from './layouts';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Carousel />
         <About />
         <Mission />
+        <Testimonial />
       </main>
     </GlobalStyles>
   );

@@ -1,0 +1,12 @@
+@use '../../scss/layouts/' as layout;
+
+.index {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+@media (max-width: 46em) {
+  .index {
+    width: 100%;
+  }
+}

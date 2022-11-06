@@ -16,7 +16,7 @@ function AboutItem({
       <div className={style.text}>
         <p className={style.index}>{number}</p>
         <h3 className={style.title}>{title}</h3>
-        <p className={style.paragraph}>{content}</p>
+        <p>{content}</p>
       </div>
       <div className={style.img}>
         <img src={imgSrc} alt={imgAlt} />

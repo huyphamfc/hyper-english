@@ -9,11 +9,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 7.2rem;
   }
-
-  .index {
-    width: 4.8rem;
-    height: 4.8rem;
-  }
 }
 
 @media (max-width: 46em) {
@@ -21,10 +16,6 @@
     .grid {
       grid-template-columns: repeat(1, 1fr);
       text-align: center;
-    }
-
-    .index {
-      width: 100%;
     }
   }
 }
