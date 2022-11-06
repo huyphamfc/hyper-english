@@ -23,12 +23,12 @@ function Header() {
 
   return (
     <header className={headerClass}>
-      <nav className={style.header__nav}>
-        <h1 className={style.header__brand}>
+      <nav className={style.nav}>
+        <h1 className={style.brand}>
           <Button transparent>HyperEnglish</Button>
         </h1>
         <Button
-          className={style.header__toggle}
+          className={style.toggle}
           transparent
           iconLeft={<FontAwesomeIcon icon={iconBtn} />}
           onClick={toggleNavbar}
