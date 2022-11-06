@@ -1,17 +1,10 @@
 @use '../../scss/abstracts' as ab;
+@use '../../scss/layouts' as layout;
 
 .about {
   @extend %wrapper;
 
   .about__brand {
     color: ab.$color-main;
-  }
-
-  .about__heading {
-    font-family: 'Fredoka One', cursive;
-    font-weight: 400;
-    font-size: 4.2rem;
-
-    padding: 7.2rem 0;
   }
 }

@@ -1,7 +1,13 @@
 import React from 'react';
 
 import { GlobalStyles } from './components';
-import { Header, Carousel, About } from './layouts';
+// prettier-ignore
+import {
+  Header,
+  Carousel,
+  About,
+  Mission,
+} from './layouts';
 
 function App() {
   return (
@@ -10,6 +16,7 @@ function App() {
       <main>
         <Carousel />
         <About />
+        <Mission />
       </main>
     </GlobalStyles>
   );

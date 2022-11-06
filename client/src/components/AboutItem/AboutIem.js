@@ -14,9 +14,9 @@ function AboutItem({
   return (
     <div className={style.grid}>
       <div className={style.text}>
-        <p className={style.number}>{number}</p>
+        <p className={style.index}>{number}</p>
         <h3 className={style.title}>{title}</h3>
-        <p className={style.content}>{content}</p>
+        <p className={style.paragraph}>{content}</p>
       </div>
       <div className={style.img}>
         <img src={imgSrc} alt={imgAlt} />

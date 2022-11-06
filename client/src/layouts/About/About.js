@@ -12,7 +12,7 @@ const dummyData = [
     number: 1,
     title: 'The easy way to learn English',
     content:
-      'Learning with HyperEnglish is function! With quick, bite-sized lessons, you&apos;ll learn points and unlock new levels.',
+      "Learning with HyperEnglish is function! With quick, bite-sized lessons, you'll learn points and unlock new levels.",
     imgSrc: aboutImg1,
     imgAlt: 'Laptop icon',
   },
@@ -48,7 +48,7 @@ function About() {
 
   return (
     <section className={style.about}>
-      <h2 className={style.about__heading}>
+      <h2 className={style.heading}>
         <span>Why you&apos;ll love learning with </span>
         <span className={style.about__brand}>HyperEnglish</span>
       </h2>
