@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,7 +18,7 @@ function MissionItem({ icon, title, paragraph }) {
 }
 
 MissionItem.propTypes = {
-  icon: PropTypes.string,
+  icon: PropTypes.object,
   title: PropTypes.string,
   paragraph: PropTypes.string,
 };
