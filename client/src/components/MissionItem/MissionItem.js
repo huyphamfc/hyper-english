@@ -7,13 +7,13 @@ import style from './MissionItem.module.scss';
 
 function MissionItem({ icon, title, paragraph }) {
   return (
-    <div>
+    <li>
       <div className={style.index}>
         <FontAwesomeIcon icon={icon} />
       </div>
       <h3 className={style.title}>{title}</h3>
       <p>{paragraph}</p>
-    </div>
+    </li>
   );
 }
 

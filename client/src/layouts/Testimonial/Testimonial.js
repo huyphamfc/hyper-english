@@ -63,7 +63,7 @@ function Testimonial() {
   return (
     <div className={style.testimonial}>
       <h2 className={style.heading}>What learners are saying</h2>
-      <div className={style.item}>{quotes}</div>
+      <ul className={style.item}>{quotes}</ul>
     </div>
   );
 }

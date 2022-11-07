@@ -12,7 +12,7 @@ function AboutItem({
   imgAlt,
 }) {
   return (
-    <div className={style.grid}>
+    <li className={style.grid}>
       <div className={style.text}>
         <p className={style.index}>{number}</p>
         <h3 className={style.title}>{title}</h3>
@@ -21,7 +21,7 @@ function AboutItem({
       <div className={style.img}>
         <img src={imgSrc} alt={imgAlt} />
       </div>
-    </div>
+    </li>
   );
 }
 

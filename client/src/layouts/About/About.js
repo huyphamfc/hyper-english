@@ -52,7 +52,7 @@ function About() {
         <span>Why you&apos;ll love learning with </span>
         <span className={style.brand}>HyperEnglish</span>
       </h2>
-      {about}
+      <ul>{about}</ul>
     </section>
   );
 }

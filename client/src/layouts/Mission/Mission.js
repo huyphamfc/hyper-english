@@ -49,7 +49,7 @@ function Mission() {
   return (
     <section className={style.mission}>
       <h2 className={style.heading}>Our mission</h2>
-      <div className={style.grid}>{missions}</div>
+      <ul className={style.grid}>{missions}</ul>
     </section>
   );
 }
