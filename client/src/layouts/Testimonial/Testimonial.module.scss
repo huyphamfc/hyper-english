@@ -5,43 +5,9 @@
   @extend %wrapper;
 
   .item {
-    position: relative;
+    @include ab.flex(row, flex-start, stretch, 3.6rem);
 
-    padding: 3.6rem 1.8rem;
-
-    box-shadow: 0 0 8px ab.$color-main-light;
-    border-radius: 16px;
-  }
-
-  .avatar {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 72px;
-    height: 72px;
-
-    border-radius: 50%;
+    padding: 2.4rem 0;
     overflow: hidden;
-
-    & img {
-      display: block;
-      width: 100%;
-    }
-  }
-
-  .icon {
-    width: 36px;
-    height: 36px;
-
-    & img {
-      display: block;
-      width: 100%;
-    }
-  }
-
-  .quote {
-    padding: 1.8rem 0;
   }
 }

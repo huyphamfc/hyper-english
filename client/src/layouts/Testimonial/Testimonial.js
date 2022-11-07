@@ -4,16 +4,47 @@ import style from './Testimonial.module.scss';
 import { TestimonialItem } from '../../components';
 
 import face1 from '../../assets/faces/face-01.jpg';
+import face2 from '../../assets/faces/face-02.jpg';
+import face3 from '../../assets/faces/face-03.jpg';
+import face4 from '../../assets/faces/face-04.jpg';
+import face5 from '../../assets/faces/face-05.jpg';
 import quoteIcon from '../../assets/icons/testimonial-quote.svg';
 
 const dummyData = [
   {
     avatarSrc: face1,
     avatarAlt: 'A female face',
-    iconSrc: quoteIcon,
     quote:
       "The best app I've ever used. I really improved my English with it. Not only pronunciation, fluency, intonation, word stress and listening.",
     author: 'Selena',
+  },
+  {
+    avatarSrc: face2,
+    avatarAlt: 'A male face',
+    quote:
+      'The app is simply amazing. It has a lot of different tools to help you learn everything about the language.',
+    author: 'Tommy',
+  },
+  {
+    avatarSrc: face3,
+    avatarAlt: 'A female face',
+    quote:
+      "This app is great. I'm that person that NEVER writes reviews. It's that good... Amazing easy interface for everyday.",
+    author: 'Elsa',
+  },
+  {
+    avatarSrc: face4,
+    avatarAlt: 'A female face',
+    quote:
+      'I love this app! It helps me speak English fluently and fix my strong accent. I can see my improvement clearly after 3 months',
+    author: 'Jack',
+  },
+  {
+    avatarSrc: face5,
+    avatarAlt: 'A female face',
+    quote:
+      'My teacher recommended this app to me. I tried and it really works! My pronunciation was very bad. After using the app, I find that my speaking skill improves day by day. Thank you team!',
+    author: 'Harlie',
   },
 ];
 
@@ -23,19 +54,16 @@ function Testimonial() {
       key={Math.random()}
       avatarSrc={item.avatarSrc}
       avatarAlt={item.avatarAlt}
-      iconSrc={quoteIcon}
-      iconAlt="Quote icon"
+      quoteIcon={quoteIcon}
       quote={item.quote}
       author={item.author}
     />
   ));
 
-  console.log(quotes);
-
   return (
     <div className={style.testimonial}>
-      <h2 className={style.heading}>Testimonial</h2>
-      <div>{quotes}</div>
+      <h2 className={style.heading}>What learners are saying</h2>
+      <div className={style.item}>{quotes}</div>
     </div>
   );
 }
