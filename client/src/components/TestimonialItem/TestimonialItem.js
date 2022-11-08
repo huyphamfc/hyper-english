@@ -12,14 +12,14 @@ function TestimonialItem({
   author,
 }) {
   return (
-    <li className={style.item}>
+    <div className={style.item}>
       <div className={style.avatar}>
         <img src={avatarSrc} alt={avatarAlt} />
       </div>
       <div className={style.icon}><img src={quoteIcon} alt="Quote icon" /></div>
       <p className={style.quote}>{quote}</p>
       <span className={style.author}>{`- ${author} -`}</span>
-    </li>
+    </div>
   );
 }
 
