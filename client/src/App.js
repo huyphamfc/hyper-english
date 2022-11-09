@@ -1,12 +1,13 @@
 import React from 'react';
 
 import { GlobalStyles } from './components';
-import { Header } from './layouts';
+import { Header, HeroSection } from './layouts';
 
 function App() {
   return (
     <GlobalStyles>
       <Header />
+      <HeroSection />
     </GlobalStyles>
   );
 }
