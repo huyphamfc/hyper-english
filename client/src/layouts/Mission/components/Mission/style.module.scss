@@ -1,0 +1,21 @@
+@use '../../../../assets/scss/abstracts' as ab;
+@use '../../../../assets/scss/layouts/' as layouts;
+
+.mission {
+  @extend %wrapper;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7.2rem;
+  }
+}
+
+@media (max-width: 46em) {
+  .mission {
+    .grid {
+      grid-template-columns: repeat(1, 1fr);
+      text-align: center;
+    }
+  }
+}

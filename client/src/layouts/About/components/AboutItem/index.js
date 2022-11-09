@@ -26,19 +26,11 @@ function AboutItem({
 }
 
 AboutItem.propTypes = {
-  index: PropTypes.string,
-  title: PropTypes.string,
-  content: PropTypes.string,
-  imgSrc: PropTypes.string,
-  imgAlt: PropTypes.string,
-};
-
-AboutItem.defaultProps = {
-  index: null,
-  title: null,
-  content: null,
-  imgSrc: null,
-  imgAlt: null,
+  index: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  imgAlt: PropTypes.string.isRequired,
 };
 
 export default AboutItem;
