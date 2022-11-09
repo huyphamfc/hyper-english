@@ -1,0 +1,10 @@
+@use '../../../../assets/scss/abstracts' as ab;
+@use '../../../../assets/scss/layouts' as layouts;
+
+.about {
+  @extend %wrapper;
+
+  .brand {
+    color: ab.$color-main;
+  }
+}

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
-import style from './NavbarToggle.module.scss';
-import { Button } from '../../../components';
+import style from './style.module.scss';
+import { Button } from '../../../../components';
 
 function NavbarToggle({ iconStatus, onClick }) {
   const toggleIcon = iconStatus ? faXmark : faBars;

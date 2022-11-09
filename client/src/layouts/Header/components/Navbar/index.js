@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import style from './Navbar.module.scss';
-import { Button } from '../../../components';
+import style from './style.module.scss';
+import { Button } from '../../../../components';
 
 function Navbar({ className }) {
   const navbarClass = classNames(style.navbar, {

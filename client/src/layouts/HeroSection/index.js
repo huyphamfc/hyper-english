@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from './HeroSection.module.scss';
+import style from './style.module.scss';
 import { Button } from '../../components';
 
 function HeroSection() {

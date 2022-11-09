@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import style from './Header.module.scss';
-import { Button } from '../../components';
-import NavbarToggle from './NavbarToggle';
-import Navbar from './Navbar';
+import style from './style.module.scss';
+import { Button } from '../../../../components';
+import NavbarToggle from '../NavbarToggle';
+import Navbar from '../Navbar';
 
 function Header() {
   const [showNavbar, setShowNavbar] = useState(false);
