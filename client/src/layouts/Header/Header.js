@@ -1,38 +1,26 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 import style from './Header.module.scss';
-import { Button, Navbar } from '../../components';
+import { Button } from '../../components';
+import NavbarToggle from './NavbarToggle';
+import Navbar from './Navbar';
 
 function Header() {
   const [showNavbar, setShowNavbar] = useState(false);
 
-  const iconBtn = showNavbar ? faXmark : faBars;
+  const navbarClass = showNavbar ? 'show' : '';
 
-  const headerClass = classNames(style.header, {
-    [style.show]: showNavbar,
-  });
-
-  const navbarClass = showNavbar ? 'show' : null;
-
-  const toggleNavbar = () => {
+  const handleNavbarToggle = () => {
     setShowNavbar((state) => !state);
   };
 
   return (
-    <header className={headerClass}>
+    <header className={style.header}>
       <nav className={style.nav}>
         <h1 className={style.brand}>
           <Button transparent>HyperEnglish</Button>
         </h1>
-        <Button
-          className={style.toggle}
-          transparent
-          iconLeft={<FontAwesomeIcon icon={iconBtn} />}
-          onClick={toggleNavbar}
-        />
+        <NavbarToggle iconStatus={showNavbar} onClick={handleNavbarToggle} />
         <Navbar className={navbarClass} />
       </nav>
     </header>

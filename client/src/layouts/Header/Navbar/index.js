@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import style from './Navbar.module.scss';
-import Button from '../Button';
+import { Button } from '../../../components';
 
 function Navbar({ className }) {
   const navbarClass = classNames(style.navbar, {

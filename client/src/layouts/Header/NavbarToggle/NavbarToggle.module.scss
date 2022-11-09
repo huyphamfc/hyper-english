@@ -1,0 +1,10 @@
+.toggle {
+  display: none;
+  font-size: 3.2rem;
+}
+
+@media (max-width: 54em) {
+  .toggle {
+    display: block;
+  }
+}
