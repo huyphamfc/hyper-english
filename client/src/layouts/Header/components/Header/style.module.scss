@@ -4,15 +4,14 @@
   position: fixed;
   width: 100%;
 
-  background-color: ab.$color-accent;
-  color: ab.$color-gray-very-light;
+  background-color: ab.$color-gray-very-light;
+  box-shadow: 0 2px 6px ab.$color-gray-light;
 
   .nav {
     @extend %wrapper;
     @include ab.flex(row, space-between, center);
     flex-wrap: wrap;
 
-    background-color: ab.$color-accent;
     padding: 1.8rem 3.2rem;
   }
 
@@ -20,5 +19,7 @@
     font-family: 'Fredoka One', cursive;
     font-size: 2.8rem;
     font-weight: 400;
+
+    color: ab.$color-main;
   }
 }
