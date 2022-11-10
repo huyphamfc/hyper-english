@@ -18,11 +18,13 @@ function About() {
 
   return (
     <section className={style.about}>
-      <h2 className={style.heading}>
-        <span>Why you&apos;ll love learning with </span>
-        <span className={style.brand}>HyperEnglish</span>
-      </h2>
-      <ul>{about}</ul>
+      <div className={style.container}>
+        <h2 className={style.heading}>
+          <span>Why you&apos;ll love learning with </span>
+          <span className={style.brand}>HyperEnglish</span>
+        </h2>
+        <ul>{about}</ul>
+      </div>
     </section>
   );
 }

@@ -2,9 +2,13 @@
 @use '../../../../assets/scss/layouts' as layouts;
 
 .about {
-  @extend %wrapper;
+  background-color: ab.$color-main;
+
+  .container {
+    @extend %wrapper;
+  }
 
   .brand {
-    color: ab.$color-main;
+    color: ab.$color-accent;
   }
 }
