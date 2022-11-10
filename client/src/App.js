@@ -1,8 +1,14 @@
-/* eslint-disable object-curly-newline */
 import React from 'react';
 
 import { GlobalStyles } from './components';
-import { Header, HeroSection, About, Mission, Testimonial } from './layouts';
+import {
+  Header,
+  HeroSection,
+  About,
+  Mission,
+  Products,
+  Testimonial,
+} from './layouts';
 
 function App() {
   return (
@@ -11,6 +17,7 @@ function App() {
       <HeroSection />
       <About />
       <Mission />
+      <Products />
       <Testimonial />
     </GlobalStyles>
   );
