@@ -11,7 +11,9 @@ function Button({
   transparent,
   round,
   iconLeft,
+  iconImgLeft,
   iconRight,
+  iconImgRight,
   onClick,
   children,
 }) {
@@ -29,8 +31,10 @@ function Button({
       onClick={onClick}
     >
       {iconLeft && <span>{iconLeft}</span>}
+      {iconImgLeft && <span className={style.iconImg}>{iconImgLeft}</span>}
       {children && <span>{children}</span>}
       {iconRight && <span>{iconRight}</span>}
+      {iconImgRight && <span className={style.iconImg}>{iconImgRight}</span>}
     </button>
   );
 }
@@ -42,7 +46,9 @@ Button.propTypes = {
   transparent: PropTypes.bool,
   round: PropTypes.bool,
   iconLeft: PropTypes.element,
+  iconImgLeft: PropTypes.element,
   iconRight: PropTypes.element,
+  iconImgRight: PropTypes.element,
   onClick: PropTypes.func,
   children: PropTypes.node,
 };
@@ -54,7 +60,9 @@ Button.defaultProps = {
   transparent: false,
   round: false,
   iconLeft: null,
+  iconImgLeft: null,
   iconRight: null,
+  iconImgRight: null,
   onClick: null,
   children: null,
 };

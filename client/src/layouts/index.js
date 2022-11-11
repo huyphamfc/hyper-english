@@ -4,3 +4,4 @@ export { default as About } from './About';
 export { default as Mission } from './Mission';
 export { default as Products } from './Products';
 export { default as Testimonial } from './Testimonial';
+export { default as Application } from './Application';

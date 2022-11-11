@@ -1,0 +1,11 @@
+@use '../../assets/scss/layouts/textImgGrid' as grid;
+
+.grid {
+  .paragraph {
+    font-size: 1.8rem;
+  }
+
+  .img {
+    height: 240px;
+  }
+}

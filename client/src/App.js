@@ -8,6 +8,7 @@ import {
   Mission,
   Products,
   Testimonial,
+  Application,
 } from './layouts';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Mission />
       <Products />
       <Testimonial />
+      <Application />
     </GlobalStyles>
   );
 }
