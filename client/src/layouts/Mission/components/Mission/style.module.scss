@@ -4,6 +4,10 @@
 .mission {
   @extend %wrapper;
 
+  .brand {
+    color: ab.$color-accent;
+  }
+
   .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

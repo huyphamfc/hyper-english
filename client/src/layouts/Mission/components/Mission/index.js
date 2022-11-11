@@ -17,7 +17,10 @@ function Mission() {
 
   return (
     <section className={style.mission}>
-      <h2 className={style.heading}>Our mission</h2>
+      <h2 className={style.heading}>
+        <span className={style.brand}>HyperEnglish</span>
+        <span> with missions</span>
+      </h2>
       <ul className={style.grid}>{missions}</ul>
     </section>
   );

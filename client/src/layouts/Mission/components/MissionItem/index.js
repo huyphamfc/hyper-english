@@ -11,7 +11,7 @@ function MissionItem({
   content,
 }) {
   return (
-    <li>
+    <li className={style.item}>
       <div className={style.img}>
         <img src={iconSrc} alt={iconAlt} />
       </div>
