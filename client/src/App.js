@@ -9,6 +9,7 @@ import {
   Products,
   Testimonial,
   Application,
+  Features,
 } from './layouts';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Products />
       <Testimonial />
       <Application />
+      <Features />
     </GlobalStyles>
   );
 }

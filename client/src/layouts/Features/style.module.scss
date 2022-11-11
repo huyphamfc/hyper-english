@@ -1,0 +1,35 @@
+@use '../../assets/scss/abstracts' as ab;
+
+.features {
+  background-color: ab.$color-main;
+
+  .container {
+    @extend %wrapper;
+  }
+
+  .text {
+    font-weight: 700;
+    color: ab.$color-gray-very-dark;
+    text-align: center;
+
+    padding-bottom: 3.2rem;
+  }
+
+  .logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+
+    & img {
+      height: 3.2rem;
+    }
+  }
+}
+
+@media (max-width: 44em) {
+  .features {
+    .logos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
