@@ -17,7 +17,7 @@ function TestimonialItem({
         <img src={avatarSrc} alt={avatarAlt} />
       </div>
       <div className={style.icon}><img src={quoteIcon} alt="Quote icon" /></div>
-      <p className={style.quote}>{quote}</p>
+      <blockquote className={style.quote}>{quote}</blockquote>
       <span className={style.author}>{`- ${author} -`}</span>
     </div>
   );

@@ -2,7 +2,11 @@
 @use '../../../../assets/scss/layouts' as layouts;
 
 .testimonial {
-  @extend %wrapper;
+  background-color: ab.$color-main;
+
+  .container {
+    @extend %wrapper;
+  }
 
   .item {
     @include ab.flex(row, flex-start, stretch, 3.6rem);

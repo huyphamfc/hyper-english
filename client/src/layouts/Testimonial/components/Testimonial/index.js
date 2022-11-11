@@ -45,8 +45,10 @@ function Testimonial() {
 
   return (
     <section className={style.testimonial}>
-      <h2 className={style.heading}>What learners are saying</h2>
-      <Slider {...settings}>{quotes}</Slider>
+      <div className={style.container}>
+        <h2 className={style.heading}>What learners are saying</h2>
+        <Slider {...settings}>{quotes}</Slider>
+      </div>
     </section>
   );
 }

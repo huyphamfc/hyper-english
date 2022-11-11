@@ -28,7 +28,7 @@
     background-color: #fff;
     color: #bceb9a;
 
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
     border: none;
     border-radius: 50%;
 
@@ -82,7 +82,8 @@
 
     font-size: 0;
 
-    background-color: #d7f3c2;
+    background-color: #fff;
+
     border: none;
     border-radius: 50%;
 
@@ -91,11 +92,11 @@
 
 .slick-dots li button:hover,
 .slick-dots li button:focus {
-    background-color: #235390;
+    border: 2px solid #235390;
 }
 
 .slick-dots li.slick-active button {
     width: 16px;
     height: 16px;
-    background-color: #58cc02;
+    background-color: #235390;
 }
