@@ -6,10 +6,10 @@ import image from '../../assets/images/hero-illustration.svg';
 
 function HeroSection() {
   return (
-    <section className={style.hero}>
+    <section className={style.grid}>
       <div className={style.container}>
         <div className={style.text}>
-          <h2 className={style.heading}>English for IT</h2>
+          <h3 className={style.heading}>English for IT</h3>
           <p className={style.paragraph}>
             The English Vocabulary series that are suitable for students and
             teachers in Information Technology.

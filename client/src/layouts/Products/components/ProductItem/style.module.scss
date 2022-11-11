@@ -1,5 +1,5 @@
 @use '../../../../assets/scss/abstracts' as ab;
-@use '../../../../assets/scss/layouts' as layouts;
+@use '../../../../assets/scss/layouts/content' as content;
 
 .item {
   @include ab.flex(row, flex-start, center, 3.2rem);
@@ -33,6 +33,12 @@
 @media (max-width: 38em) {
   .item {
     flex-direction: column;
+    align-items: stretch;
+
+    .text {
+      @include ab.flex(column, flex-start, stretch);
+      text-align: center;
+    }
 
     .img {
       & img {
