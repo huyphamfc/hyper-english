@@ -1,4 +1,6 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -6,6 +8,12 @@ import style from './style.module.scss';
 import Button from '../Button/Button';
 
 function BackToTop() {
+  const { showBackToTop } = useSelector((state) => state.backToTop);
+
+  const btnClass = classNames(style.button, {
+    [style.show]: showBackToTop,
+  });
+
   const handleBackToTop = () => {
     window.scrollTo({
       top: 0,
@@ -15,7 +23,7 @@ function BackToTop() {
   };
 
   return (
-    <Button className={style.button} onClick={handleBackToTop}>
+    <Button className={btnClass} onClick={handleBackToTop}>
       <FontAwesomeIcon icon={faArrowUp} />
     </Button>
   );
