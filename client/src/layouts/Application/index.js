@@ -18,10 +18,18 @@ function Application() {
             their highest accolades.
           </p>
           <div className={style.actions}>
-            <Button solid iconImgLeft={<img src={appIcon} alt="Icon" />}>
+            <Button
+              solid
+              iconImgLeft={<img src={appIcon} alt="Icon" />}
+              href="https://www.apple.com/app-store/"
+            >
               App Store
             </Button>
-            <Button solid iconImgLeft={<img src={ggIcon} alt="Icon" />}>
+            <Button
+              solid
+              iconImgLeft={<img src={ggIcon} alt="Icon" />}
+              href="https://play.google.com/"
+            >
               Google Play
             </Button>
           </div>

@@ -15,24 +15,29 @@ function FooterBrand() {
           <Button
             transparent
             iconImgLeft={<img src={fbIcon} alt="Facebook icon" />}
+            href="https://www.facebook.com/"
           />
         </li>
         <li>
           <Button
             transparent
             iconImgLeft={<img src={instaIcon} alt="Instagram icon" />}
+            href="https://www.instagram.com/"
           />
         </li>
         <li>
           <Button
             transparent
             iconImgLeft={<img src={ytIcon} alt="YouTube icon" />}
+            href="https://www.youtube.com/"
           />
         </li>
       </ul>
       <span>
         Copyright &copy;
-        <Button transparent>&nbsp;huyphamfc.&nbsp;</Button>
+        <Button transparent href="https://www.github.com/">
+          &nbsp;huyphamfc.&nbsp;
+        </Button>
         All rights reserved.
       </span>
     </div>

@@ -17,6 +17,7 @@ function Button({
   iconImgRight,
   onClick,
   children,
+  href,
 }) {
   const btnClass = classNames(style.btn, {
     [style.solid]: solid,
@@ -26,18 +27,17 @@ function Button({
     [style.round]: round,
   });
 
+  let Comp = 'button';
+  if (href) Comp = 'a';
+
   return (
-    <button
-      className={`${className} ${btnClass}`}
-      type="button"
-      onClick={onClick}
-    >
+    <Comp className={`${className} ${btnClass}`} href={href} onClick={onClick}>
       {iconLeft && <span>{iconLeft}</span>}
       {iconImgLeft && <span className={style.iconImg}>{iconImgLeft}</span>}
       {children && <span>{children}</span>}
       {iconRight && <span>{iconRight}</span>}
       {iconImgRight && <span className={style.iconImg}>{iconImgRight}</span>}
-    </button>
+    </Comp>
   );
 }
 
@@ -54,10 +54,11 @@ Button.propTypes = {
   iconImgRight: PropTypes.element,
   onClick: PropTypes.func,
   children: PropTypes.node,
+  href: PropTypes.string,
 };
 
 Button.defaultProps = {
-  className: null,
+  className: '',
   solid: false,
   outline: false,
   transparent: false,
@@ -69,6 +70,7 @@ Button.defaultProps = {
   iconImgRight: null,
   onClick: null,
   children: null,
+  href: null,
 };
 
 export default Button;
