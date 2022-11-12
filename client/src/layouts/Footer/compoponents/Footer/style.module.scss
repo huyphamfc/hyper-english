@@ -1,0 +1,28 @@
+@use '../../../../assets/scss/abstracts' as ab;
+
+.footer {
+  @extend %wrapper;
+
+  display: grid;
+  grid-template-areas: 'brand brand contact account company resource';
+  gap: 3.6rem;
+}
+
+@media (max-width: 54em) {
+  .footer {
+    grid-template-areas:
+      'account account company company resource resource'
+      'brand brand brand contact contact contact';
+  }
+}
+
+@media (max-width: 36em) {
+  .footer {
+    grid-template-areas:
+      'account'
+      'company'
+      'resource'
+      'contact'
+      'brand';
+  }
+}

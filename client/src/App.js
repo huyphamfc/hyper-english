@@ -10,6 +10,7 @@ import {
   Testimonial,
   Application,
   Features,
+  Footer,
 } from './layouts';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Testimonial />
       <Application />
       <Features />
+      <Footer />
     </GlobalStyles>
   );
 }
