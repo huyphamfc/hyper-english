@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { GlobalStyles } from './components';
+import { GlobalStyles, BackToTop } from './components';
 import {
   Header,
   HeroSection,
@@ -25,6 +25,7 @@ function App() {
       <Application />
       <Features />
       <Footer />
+      <BackToTop />
     </GlobalStyles>
   );
 }
