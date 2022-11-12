@@ -35,6 +35,17 @@
   }
 }
 
+.white {
+  background-color: transparent;
+  color: ab.$color-gray-very-light;
+  border-color: ab.$color-gray-very-light;
+
+  &:hover {
+    background-color: ab.$color-gray-very-light;
+    color: ab.$color-main;
+  }
+}
+
 .round {
   border-radius: 999px;
 }

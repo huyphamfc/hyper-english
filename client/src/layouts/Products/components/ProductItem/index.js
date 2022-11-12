@@ -15,7 +15,7 @@ function ProductItem(props) {
       </div>
       <div className={style.text}>
         <h3 className={style.title}>{title}</h3>
-        <Button outline>Let&apos;s go! &rarr;</Button>
+        <Button white>Let&apos;s go! &rarr;</Button>
       </div>
     </li>
   );
