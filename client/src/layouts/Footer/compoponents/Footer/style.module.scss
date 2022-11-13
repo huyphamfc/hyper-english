@@ -1,28 +1,46 @@
 @use '../../../../assets/scss/abstracts' as ab;
 
 .footer {
-  @extend %wrapper;
+  position: relative;
 
-  display: grid;
-  grid-template-areas: 'brand brand contact account company resource';
-  gap: 3.6rem;
+  &::after {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 8px;
+
+    content: '';
+    background: linear-gradient(to right, ab.$color-main, ab.$color-accent);
+  }
+
+  .container {
+    @extend %wrapper;
+    display: grid;
+    grid-template-areas: 'brand brand contact account company resource';
+    gap: 3.6rem;
+  }
 }
 
 @media (max-width: 54em) {
   .footer {
-    grid-template-areas:
-      'account account company company resource resource'
-      'brand brand brand contact contact contact';
+    .container {
+      grid-template-areas:
+        'account account company company resource resource'
+        'brand brand brand contact contact contact';
+    }
   }
 }
 
 @media (max-width: 36em) {
   .footer {
-    grid-template-areas:
-      'account'
-      'company'
-      'resource'
-      'contact'
-      'brand';
+    .container {
+      grid-template-areas:
+        'account'
+        'company'
+        'resource'
+        'contact'
+        'brand';
+    }
   }
 }

@@ -17,8 +17,10 @@ function Footer() {
 
   return (
     <footer className={style.footer}>
-      <FooterBrand />
-      {footerItems}
+      <div className={style.container}>
+        <FooterBrand />
+        {footerItems}
+      </div>
     </footer>
   );
 }
