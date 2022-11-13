@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import classNames from 'classnames';
 
 import style from './style.module.scss';
 import { Button } from '../../../../components';
@@ -10,12 +11,16 @@ function Header() {
 
   const navbarClass = showNavbar ? 'show' : '';
 
+  const headerClass = classNames(style.header, {
+    [style.showNavbar]: showNavbar,
+  });
+
   const handleNavbarToggle = () => {
     setShowNavbar((state) => !state);
   };
 
   return (
-    <header className={style.header}>
+    <header className={headerClass}>
       <nav className={style.nav}>
         <h1 className={style.brand}>
           <Button transparent>HyperEnglish</Button>
