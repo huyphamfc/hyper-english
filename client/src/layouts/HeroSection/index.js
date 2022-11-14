@@ -25,7 +25,9 @@ function HeroSection() {
           </p>
           <div className={style.actions}>
             <Button solid>Get Started</Button>
-            <Button outline>Learn more &darr;</Button>
+            <Button outline href="#about">
+              Learn more &darr;
+            </Button>
           </div>
         </div>
         <div className={style.img}>

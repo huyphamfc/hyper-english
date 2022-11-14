@@ -23,10 +23,16 @@ function Header() {
     <header className={headerClass}>
       <nav className={style.nav}>
         <h1 className={style.brand}>
-          <Button transparent>HyperEnglish</Button>
+          <Button transparent href="#">
+            HyperEnglish
+          </Button>
         </h1>
         <NavbarToggle iconStatus={showNavbar} onClick={handleNavbarToggle} />
-        <Navbar className={navbarClass} />
+        <Navbar
+          className={navbarClass}
+          navbarStatus={showNavbar}
+          onClick={handleNavbarToggle}
+        />
       </nav>
     </header>
   );

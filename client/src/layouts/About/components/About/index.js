@@ -17,7 +17,7 @@ function About() {
   ));
 
   return (
-    <section className={style.about}>
+    <section className={style.about} id="about">
       <div className={style.container}>
         <h2 className={style.heading}>
           <span>Why you&apos;ll love learning with </span>

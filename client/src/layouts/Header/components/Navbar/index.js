@@ -5,24 +5,36 @@ import classNames from 'classnames';
 import style from './style.module.scss';
 import { Button } from '../../../../components';
 
-function Navbar({ className }) {
+function Navbar({ className, navbarStatus, onClick }) {
   const navbarClass = classNames(style.navbar, {
     [style[className]]: className,
   });
 
+  const handleScrollTo = () => {
+    if (navbarStatus) onClick();
+  };
+
   return (
     <ul className={navbarClass}>
       <li>
-        <Button transparent>Home</Button>
+        <Button transparent href="#" onClick={handleScrollTo}>
+          Home
+        </Button>
       </li>
       <li>
-        <Button transparent>About</Button>
+        <Button transparent href="#about" onClick={handleScrollTo}>
+          About
+        </Button>
       </li>
       <li>
-        <Button transparent>Products</Button>
+        <Button transparent href="#products" onClick={handleScrollTo}>
+          Products
+        </Button>
       </li>
       <li>
-        <Button transparent>Contact</Button>
+        <Button transparent href="#contact" onClick={handleScrollTo}>
+          Contact
+        </Button>
       </li>
       <li>
         <Button solid round>
@@ -34,11 +46,9 @@ function Navbar({ className }) {
 }
 
 Navbar.propTypes = {
-  className: PropTypes.string,
-};
-
-Navbar.defaultProps = {
-  className: null,
+  className: PropTypes.string.isRequired,
+  navbarStatus: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Navbar;

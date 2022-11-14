@@ -12,6 +12,15 @@
     display: none;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: stretch;
+
+    & li {
+      text-align: center;
+    }
+
+    & a {
+      width: 100%;
+    }
   }
 
   .show {

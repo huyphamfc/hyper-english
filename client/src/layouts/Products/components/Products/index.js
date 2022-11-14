@@ -16,7 +16,7 @@ function Products() {
   ));
 
   return (
-    <section className={style.products}>
+    <section className={style.products} id="products">
       <h2 className={style.heading}>Learn what you&apos;re interested in</h2>
       <ul className={style.items}>{products}</ul>
     </section>
