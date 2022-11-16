@@ -1,0 +1,12 @@
+@use '../../../../assets/scss/abstracts' as ab;
+
+.vocabulary {
+  @extend %wrapper;
+  @include ab.flex(column, space-between, stretch, 2.4rem);
+
+  min-height: 100vh;
+
+  .actions {
+    @include ab.flex(row, center, center, 1.8rem);
+  }
+}

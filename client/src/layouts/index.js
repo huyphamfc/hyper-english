@@ -7,3 +7,5 @@ export { default as Testimonial } from './Testimonial';
 export { default as Application } from './Application';
 export { default as Features } from './Features';
 export { default as Footer } from './Footer';
+
+export { default as Vocabulary } from './Vocabulary';
