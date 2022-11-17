@@ -1,12 +1,13 @@
 import React from 'react';
 
 import { GlobalStyles } from './components';
-import { Vocabulary } from './layouts';
+import { Header, Lessons } from './layouts';
 
 function App() {
   return (
     <GlobalStyles>
-      <Vocabulary />
+      <Header />
+      <Lessons />
     </GlobalStyles>
   );
 }
