@@ -4,7 +4,7 @@ import style from './style.module.scss';
 import MissionItem from '../MissionItem';
 import data from '../../data';
 
-function Mission() {
+function Missions() {
   const missions = data.map((item) => (
     <MissionItem
       key={item.id}
@@ -16,7 +16,7 @@ function Mission() {
   ));
 
   return (
-    <section className={style.mission}>
+    <section className={style.missions}>
       <h2 className={style.heading}>
         <span className={style.brand}>HyperEnglish</span>
         <span> with missions</span>
@@ -26,4 +26,4 @@ function Mission() {
   );
 }
 
-export default Mission;
+export default Missions;

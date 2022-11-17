@@ -7,7 +7,7 @@ import style from './style.module.scss';
 import TestimonialItem from '../TestimonialItem';
 import data from '../../data';
 
-function Testimonial() {
+function Testimonials() {
   const quotes = data.map((item) => (
     <TestimonialItem
       key={item.id}
@@ -44,7 +44,7 @@ function Testimonial() {
   };
 
   return (
-    <section className={style.testimonial}>
+    <section className={style.testimonials}>
       <div className={style.container}>
         <h2 className={style.heading}>What learners are saying</h2>
         <Slider {...settings}>{quotes}</Slider>
@@ -53,4 +53,4 @@ function Testimonial() {
   );
 }
 
-export default Testimonial;
+export default Testimonials;
