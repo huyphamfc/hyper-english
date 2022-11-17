@@ -5,10 +5,13 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 import App from './App';
+import { GlobalStyles } from './components';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <App />
+    <GlobalStyles>
+      <App />
+    </GlobalStyles>
   </Provider>,
 );

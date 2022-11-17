@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { GlobalStyles } from './components';
+import publicRoutes from './routes';
 import { Header } from './layouts';
-import Home from './pages/Home';
 
 function App() {
+  const routes = publicRoutes.map((route) => {
+    const Layout = route?.layout === null ? Fragment : Header;
+    const Content = route.component;
+
+    // prettier-ignore
+    return (
+      <Route
+        key={route.id}
+        path={route.path}
+        element={(
+          <>
+            <Layout />
+            <Content />
+          </>
+        )}
+      />
+    );
+  });
+
   return (
-    <GlobalStyles>
-      <Header />
-      <Home />
-    </GlobalStyles>
+    <BrowserRouter>
+      <Routes>{routes}</Routes>
+    </BrowserRouter>
   );
 }
 
