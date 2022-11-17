@@ -27,11 +27,14 @@ function Header() {
             HyperEnglish
           </Button>
         </h1>
-        <NavbarToggle iconStatus={showNavbar} onClick={handleNavbarToggle} />
+        <NavbarToggle
+          iconStatus={showNavbar}
+          toggleNavbar={handleNavbarToggle}
+        />
         <Navbar
           className={navbarClass}
           navbarStatus={showNavbar}
-          onClick={handleNavbarToggle}
+          toggleNavbar={handleNavbarToggle}
         />
       </nav>
     </header>

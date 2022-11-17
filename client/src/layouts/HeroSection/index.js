@@ -1,21 +1,12 @@
 import React from 'react';
-import { InView } from 'react-intersection-observer';
-import { useDispatch } from 'react-redux';
 
 import style from './style.module.scss';
 import { Button } from '../../components';
 import image from '../../assets/images/hero-illustration.svg';
-import { toggleBackToTop } from '../../store/BackToTop';
 
 function HeroSection() {
-  const dispatch = useDispatch();
-
-  const handleIntersection = () => {
-    dispatch(toggleBackToTop());
-  };
-
   return (
-    <InView className={style.grid} as="section" onChange={handleIntersection}>
+    <section className={style.grid}>
       <div className={style.container}>
         <div className={style.text}>
           <h3 className={style.heading}>English for IT</h3>
@@ -36,7 +27,7 @@ function HeroSection() {
           <img src={image} alt="The Earth." />
         </div>
       </div>
-    </InView>
+    </section>
   );
 }
 

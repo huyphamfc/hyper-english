@@ -5,19 +5,19 @@ import classNames from 'classnames';
 import style from './style.module.scss';
 import { Button } from '../../../../components';
 
-function Navbar({ className, navbarStatus, onClick }) {
+function Navbar({ className, navbarStatus, toggleNavbar }) {
   const navbarClass = classNames(style.navbar, {
     [style[className]]: className,
   });
 
   const handleScrollTo = () => {
-    if (navbarStatus) onClick();
+    if (navbarStatus) toggleNavbar();
   };
 
   return (
     <ul className={navbarClass}>
       <li>
-        <Button transparent href="#">
+        <Button transparent href="#" onClick={handleScrollTo}>
           Home
         </Button>
       </li>
@@ -48,7 +48,7 @@ function Navbar({ className, navbarStatus, onClick }) {
 Navbar.propTypes = {
   className: PropTypes.string.isRequired,
   navbarStatus: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired,
+  toggleNavbar: PropTypes.func.isRequired,
 };
 
 export default Navbar;
