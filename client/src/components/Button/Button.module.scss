@@ -7,7 +7,7 @@
   padding: 1.2rem 2.4rem;
 
   border: 2px solid ab.$color-main;
-  border-radius: 6px;
+  border-radius: 999px;
 
   transition: all 0.5s;
   cursor: pointer;
@@ -19,8 +19,12 @@
   color: ab.$color-gray-very-light;
 }
 
-.outline,
 .solid:hover {
+  background-color: ab.$color-main-dark;
+  border-color: ab.$color-main-dark;
+}
+
+.outline {
   background-color: transparent;
   color: ab.$color-main;
 }
@@ -36,18 +40,13 @@
 }
 
 .white {
-  background-color: transparent;
-  color: ab.$color-gray-very-light;
+  background-color: ab.$color-gray-very-light;
+  color: ab.$color-gray-very-dark;
   border-color: ab.$color-gray-very-light;
 
   &:hover {
-    background-color: ab.$color-gray-very-light;
     color: ab.$color-main;
   }
-}
-
-.round {
-  border-radius: 999px;
 }
 
 .iconImg {

@@ -11,7 +11,6 @@ function Button({
   outline,
   transparent,
   white,
-  round,
   iconLeft,
   iconImgLeft,
   iconRight,
@@ -26,7 +25,6 @@ function Button({
     [style.outline]: outline,
     [style.transparent]: transparent,
     [style.white]: white,
-    [style.round]: round,
   });
 
   let Comp = 'button';
@@ -55,7 +53,6 @@ Button.propTypes = {
   outline: PropTypes.bool,
   transparent: PropTypes.bool,
   white: PropTypes.bool,
-  round: PropTypes.bool,
   iconLeft: PropTypes.element,
   iconImgLeft: PropTypes.element,
   iconRight: PropTypes.element,
@@ -72,7 +69,6 @@ Button.defaultProps = {
   outline: false,
   transparent: false,
   white: false,
-  round: false,
   iconLeft: null,
   iconImgLeft: null,
   iconRight: null,

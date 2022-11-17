@@ -19,14 +19,14 @@ function Application() {
           </p>
           <div className={style.actions}>
             <Button
-              solid
+              outline
               iconImgLeft={<img src={appIcon} alt="Icon" />}
               href="https://www.apple.com/app-store/"
             >
               App Store
             </Button>
             <Button
-              solid
+              outline
               iconImgLeft={<img src={ggIcon} alt="Icon" />}
               href="https://play.google.com/"
             >

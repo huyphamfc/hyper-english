@@ -37,9 +37,7 @@ function Navbar({ className, isOpenNavbar, toggleNavbar }) {
         </Button>
       </li>
       <li>
-        <Button solid round>
-          Join
-        </Button>
+        <Button solid>Join</Button>
       </li>
     </ul>
   );

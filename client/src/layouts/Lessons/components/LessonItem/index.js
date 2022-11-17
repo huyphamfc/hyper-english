@@ -10,7 +10,7 @@ function LessonNumberItem({ name, lessonNumber }) {
       <span className={style.number}>{lessonNumber}</span>
       <h2>{name}</h2>
       <div className={style.overlay}>
-        <Button solid to="/vocabulary">
+        <Button white to="/vocabulary">
           Learn!
         </Button>
       </div>
