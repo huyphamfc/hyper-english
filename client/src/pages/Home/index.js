@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { BackToTop } from '../../components';
 import {
   HeroSection,
   About,
@@ -10,12 +9,12 @@ import {
   Application,
   Features,
   Footer,
+  BackToTop,
 } from '../../layouts';
 
 function Home() {
   return (
-    <>
-      <HeroSection />
+    <BackToTop Target={HeroSection}>
       <About />
       <Missions />
       <Products />
@@ -23,8 +22,7 @@ function Home() {
       <Application />
       <Features />
       <Footer />
-      <BackToTop />
-    </>
+    </BackToTop>
   );
 }
 
