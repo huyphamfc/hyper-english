@@ -1,4 +1,3 @@
-/* eslint-disable object-curly-newline */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -6,6 +5,7 @@ import style from './style.module.scss';
 import { Button } from '../../../../components';
 
 function ProductItem(props) {
+  // eslint-disable-next-line object-curly-newline
   const { bgColor, imgSrc, imgAlt, title } = props;
 
   return (
@@ -15,7 +15,9 @@ function ProductItem(props) {
       </div>
       <div className={style.text}>
         <h3 className={style.title}>{title}</h3>
-        <Button white>Let&apos;s go! &rarr;</Button>
+        <Button white to="/lessons">
+          Let&apos;s go! &rarr;
+        </Button>
       </div>
     </li>
   );

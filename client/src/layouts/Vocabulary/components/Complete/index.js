@@ -17,7 +17,9 @@ function CompleteModal({ closeModal }) {
         <Button transparent onClick={closeModal}>
           Back
         </Button>
-        <Button solid>Continue</Button>
+        <Button solid to="/lessons">
+          Continue
+        </Button>
       </div>
     </div>
   );

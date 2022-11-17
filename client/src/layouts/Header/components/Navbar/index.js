@@ -17,7 +17,7 @@ function Navbar({ className, navbarStatus, onClick }) {
   return (
     <ul className={navbarClass}>
       <li>
-        <Button transparent href="#" onClick={handleScrollTo}>
+        <Button transparent href="#">
           Home
         </Button>
       </li>

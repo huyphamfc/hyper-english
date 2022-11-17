@@ -15,7 +15,7 @@ function Status({ process }) {
           style={{ width: `${process}%` }}
         />
       </div>
-      <Button className={style.exit} transparent>
+      <Button className={style.exit} transparent to="/lessons">
         <FontAwesomeIcon icon={faXmark} />
       </Button>
     </div>

@@ -24,7 +24,9 @@ function HeroSection() {
             teachers in Information Technology.
           </p>
           <div className={style.actions}>
-            <Button solid>Get Started</Button>
+            <Button solid to="/lessons">
+              Get Started
+            </Button>
             <Button outline href="#about">
               Learn more &darr;
             </Button>

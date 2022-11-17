@@ -23,7 +23,7 @@ function Header() {
     <header className={headerClass}>
       <nav className={style.nav}>
         <h1 className={style.brand}>
-          <Button transparent href="#">
+          <Button transparent to="/">
             HyperEnglish
           </Button>
         </h1>

@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import style from './Button.module.scss';
 
@@ -18,6 +19,7 @@ function Button({
   onClick,
   children,
   href,
+  to,
 }) {
   const btnClass = classNames(style.btn, {
     [style.solid]: solid,
@@ -29,9 +31,15 @@ function Button({
 
   let Comp = 'button';
   if (href) Comp = 'a';
+  if (to) Comp = Link;
 
   return (
-    <Comp className={`${className} ${btnClass}`} href={href} onClick={onClick}>
+    <Comp
+      className={`${className} ${btnClass}`}
+      href={href}
+      to={to}
+      onClick={onClick}
+    >
       {iconLeft && <span>{iconLeft}</span>}
       {iconImgLeft && <span className={style.iconImg}>{iconImgLeft}</span>}
       {children && <span>{children}</span>}
@@ -55,6 +63,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.node,
   href: PropTypes.string,
+  to: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -71,6 +80,7 @@ Button.defaultProps = {
   onClick: null,
   children: null,
   href: null,
+  to: null,
 };
 
 export default Button;
