@@ -5,13 +5,13 @@ import classNames from 'classnames';
 import style from './style.module.scss';
 import { Button } from '../../../../components';
 
-function Navbar({ className, navbarStatus, toggleNavbar }) {
+function Navbar({ className, isOpenNavbar, toggleNavbar }) {
   const navbarClass = classNames(style.navbar, {
     [style[className]]: className,
   });
 
   const handleScrollTo = () => {
-    if (navbarStatus) toggleNavbar();
+    if (isOpenNavbar) toggleNavbar();
   };
 
   return (
@@ -47,7 +47,7 @@ function Navbar({ className, navbarStatus, toggleNavbar }) {
 
 Navbar.propTypes = {
   className: PropTypes.string.isRequired,
-  navbarStatus: PropTypes.bool.isRequired,
+  isOpenNavbar: PropTypes.bool.isRequired,
   toggleNavbar: PropTypes.func.isRequired,
 };
 

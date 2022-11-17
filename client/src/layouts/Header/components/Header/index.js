@@ -9,11 +9,11 @@ import Navbar from '../Navbar';
 function Header() {
   const [showNavbar, setShowNavbar] = useState(false);
 
-  const navbarClass = showNavbar ? 'show' : '';
-
   const headerClass = classNames(style.header, {
     [style.showNavbar]: showNavbar,
   });
+
+  const navbarClass = showNavbar ? 'show' : '';
 
   const handleNavbarToggle = () => {
     setShowNavbar((state) => !state);
@@ -28,12 +28,12 @@ function Header() {
           </Button>
         </h1>
         <NavbarToggle
-          iconStatus={showNavbar}
+          isShowIcon={showNavbar}
           toggleNavbar={handleNavbarToggle}
         />
         <Navbar
           className={navbarClass}
-          navbarStatus={showNavbar}
+          isOpenNavbar={showNavbar}
           toggleNavbar={handleNavbarToggle}
         />
       </nav>

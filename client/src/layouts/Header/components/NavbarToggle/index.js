@@ -6,8 +6,8 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import style from './style.module.scss';
 import { Button } from '../../../../components';
 
-function NavbarToggle({ iconStatus, toggleNavbar }) {
-  const toggleIcon = iconStatus ? faXmark : faBars;
+function NavbarToggle({ isShowIcon, toggleNavbar }) {
+  const toggleIcon = isShowIcon ? faXmark : faBars;
 
   return (
     <Button
@@ -20,7 +20,7 @@ function NavbarToggle({ iconStatus, toggleNavbar }) {
 }
 
 NavbarToggle.propTypes = {
-  iconStatus: PropTypes.bool.isRequired,
+  isShowIcon: PropTypes.bool.isRequired,
   toggleNavbar: PropTypes.func.isRequired,
 };
 
