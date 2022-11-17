@@ -1,4 +1,3 @@
-/* eslint-disable react/forbid-prop-types */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -25,7 +24,7 @@ function BackToTop({ Target, children }) {
 
 BackToTop.propTypes = {
   Target: PropTypes.elementType.isRequired,
-  children: PropTypes.array.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default BackToTop;
