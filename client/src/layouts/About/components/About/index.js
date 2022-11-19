@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import style from './style.module.scss';
 import AboutItem from '../AboutItem';
-import data from '../../data';
 
 function About() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/about`)
+      .then((res) => res.json())
+      .then((result) => setData(result.data));
+  }, []);
+
   const about = data.map((item) => (
     <AboutItem
       key={item.index}
       index={item.index}
       title={item.title}
       content={item.content}
-      imgSrc={item.imgSrc}
+      imgSrc={`${process.env.REACT_APP_SERVER_URL}/${item.imgSrc}`}
       imgAlt={item.imgAlt}
     />
   ));
