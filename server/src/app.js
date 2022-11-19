@@ -1,6 +1,7 @@
 const dotenv = require('dotenv');
-const morgan = require('morgan');
 const express = require('express');
+const cors = require('cors');
+const morgan = require('morgan');
 
 const AppError = require('./utils/AppError');
 const handleGlobalError = require('./controllers/globalErrorController');
@@ -9,6 +10,8 @@ const aboutRouter = require('./routers/aboutRouter');
 dotenv.config();
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
