@@ -4,6 +4,7 @@ const express = require('express');
 
 const AppError = require('./utils/AppError');
 const handleGlobalError = require('./controllers/globalErrorController');
+const aboutRouter = require('./routers/aboutRouter');
 
 dotenv.config();
 
@@ -15,12 +16,7 @@ app.use('/api/public', express.static('public'));
 
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 
-app.get('/api', (req, res) => {
-  res.status(200).json({
-    status: 'success',
-    message: 'Hello from the server!',
-  });
-});
+app.use('/api/about', aboutRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(404, `Cannot find ${req.originalUrl} on the server.`));
