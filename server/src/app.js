@@ -6,6 +6,7 @@ const morgan = require('morgan');
 const AppError = require('./utils/AppError');
 const handleGlobalError = require('./controllers/globalErrorController');
 const aboutRouter = require('./routers/aboutRouter');
+const missionRouter = require('./routers/missionRouter');
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.use('/api/public', express.static('public'));
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 
 app.use('/api/about', aboutRouter);
+app.use('/api/missions', missionRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(404, `Cannot find ${req.originalUrl} on the server.`));
