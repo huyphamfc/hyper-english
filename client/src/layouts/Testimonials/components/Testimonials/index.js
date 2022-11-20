@@ -1,20 +1,28 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 
 import './slick.css';
 import style from './style.module.scss';
 import TestimonialItem from '../TestimonialItem';
-import data from '../../data';
 
 function Testimonials() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/testimonials`)
+      .then((res) => res.json())
+      .then((result) => setData(result.data));
+  }, []);
+
   const quotes = data.map((item) => (
     <TestimonialItem
-      key={item.id}
-      avatarSrc={item.avatarSrc}
-      avatarAlt={item.avatarAlt}
-      quote={item.quote}
+      key={item._id}
       author={item.author}
+      quote={item.quote}
+      avatarSrc={`${process.env.REACT_APP_SERVER_URL}/${item.avatarSrc}`}
+      avatarAlt={item.avatarAlt}
     />
   ));
 
