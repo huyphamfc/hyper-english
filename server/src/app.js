@@ -8,6 +8,7 @@ const handleGlobalError = require('./controllers/globalErrorController');
 const aboutRouter = require('./routers/aboutRouter');
 const missionRouter = require('./routers/missionRouter');
 const productRouter = require('./routers/productRouter');
+const testimonialRouter = require('./routers/testimonialRouter');
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 app.use('/api/about', aboutRouter);
 app.use('/api/missions', missionRouter);
 app.use('/api/products', productRouter);
+app.use('/api/testimonials', testimonialRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(404, `Cannot find ${req.originalUrl} on the server.`));
