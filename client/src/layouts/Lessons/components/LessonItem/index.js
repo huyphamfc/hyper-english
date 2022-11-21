@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import style from './style.module.scss';
 import { Button } from '../../../../components';
 
-function LessonNumberItem({ name, lessonNumber }) {
+function LessonItem({ name, lessonNumber }) {
   return (
     <li className={style.item}>
       <span className={style.number}>{lessonNumber}</span>
       <h2>{name}</h2>
       <div className={style.overlay}>
-        <Button white to="/vocabulary">
+        <Button white to={`/lesson/${lessonNumber}`}>
           Learn!
         </Button>
       </div>
@@ -18,9 +18,9 @@ function LessonNumberItem({ name, lessonNumber }) {
   );
 }
 
-LessonNumberItem.propTypes = {
+LessonItem.propTypes = {
   lessonNumber: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
 };
 
-export default LessonNumberItem;
+export default LessonItem;
