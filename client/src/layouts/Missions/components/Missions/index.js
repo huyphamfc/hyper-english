@@ -1,19 +1,14 @@
 /* eslint-disable no-underscore-dangle */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import style from './style.module.scss';
 import MissionItem from '../MissionItem';
+import useFetch from '../../../../hooks/useFetch';
 
 function Missions() {
-  const [data, setData] = useState([]);
+  const { data } = useFetch('missions');
 
-  useEffect(() => {
-    fetch(`${process.env.REACT_APP_SERVER_URL}/missions`)
-      .then((res) => res.json())
-      .then((result) => setData(result.data));
-  }, []);
-
-  const missions = data.map((item) => (
+  const missions = data?.map((item) => (
     <MissionItem
       key={item._id}
       title={item.title}

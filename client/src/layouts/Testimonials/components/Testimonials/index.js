@@ -1,22 +1,17 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 
 import './slick.css';
 import style from './style.module.scss';
 import TestimonialItem from '../TestimonialItem';
+import useFetch from '../../../../hooks/useFetch';
 
 function Testimonials() {
-  const [data, setData] = useState([]);
+  const { data } = useFetch('testimonials');
 
-  useEffect(() => {
-    fetch(`${process.env.REACT_APP_SERVER_URL}/testimonials`)
-      .then((res) => res.json())
-      .then((result) => setData(result.data));
-  }, []);
-
-  const quotes = data.map((item) => (
+  const quotes = data?.map((item) => (
     <TestimonialItem
       key={item._id}
       author={item.author}

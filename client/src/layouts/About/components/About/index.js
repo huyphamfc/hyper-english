@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import style from './style.module.scss';
 import AboutItem from '../AboutItem';
+import useFetch from '../../../../hooks/useFetch';
 
 function About() {
-  const [data, setData] = useState([]);
+  const { data } = useFetch('about');
 
-  useEffect(() => {
-    fetch(`${process.env.REACT_APP_SERVER_URL}/about`)
-      .then((res) => res.json())
-      .then((result) => setData(result.data));
-  }, []);
-
-  const about = data.map((item) => (
+  const about = data?.map((item) => (
     <AboutItem
       key={item.index}
       index={item.index}

@@ -1,19 +1,14 @@
 /* eslint-disable no-underscore-dangle */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import style from './style.module.scss';
 import ProductItem from '../ProductItem';
+import useFetch from '../../../../hooks/useFetch';
 
 function Products() {
-  const [data, setData] = useState([]);
+  const { data } = useFetch('products');
 
-  useEffect(() => {
-    fetch(`${process.env.REACT_APP_SERVER_URL}/products`)
-      .then((res) => res.json())
-      .then((result) => setData(result.data));
-  }, []);
-
-  const products = data.map((item) => (
+  const products = data?.map((item) => (
     <ProductItem
       key={item._id}
       title={item.title}
