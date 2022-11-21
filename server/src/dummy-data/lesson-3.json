@@ -1,0 +1,35 @@
+[
+  {
+    "lesson": 3,
+    "content": [
+      {
+        "id": 1,
+        "vocabulary": "cookie",
+        "pronunciation": "/ˈkʊk.i/",
+        "meaning": "a small block of data created by a web server while a user is browsing a website",
+        "example": "The information of the users is collected and stored on their computers."
+      },
+      {
+        "id": 2,
+        "vocabulary": "domain name",
+        "pronunciation": "/dəˈmeɪn/ /neɪm/",
+        "meaning": "the unique name which identifies a website",
+        "example": "The domain name of Google is google.com."
+      },
+      {
+        "id": 3,
+        "vocabulary": "hyperlink",
+        "pronunciation": "/ˈhaɪ.pɚ.lɪŋk/",
+        "meaning": "a connection that allows you to move easily between two computer documents or two pages on the Internet",
+        "example": "The woman asked her professor if the textbook was available as hypertext."
+      },
+      {
+        "id": 4,
+        "vocabulary": "www (World Wide Web)",
+        "pronunciation": "/wɝːld/ /waɪd/ /web/",
+        "meaning": "a global hypertext system operating on the Internet",
+        "example": "The World Wide Web is the best thing to happen to computing since the birth of the PC."
+      }
+    ]
+  }
+]

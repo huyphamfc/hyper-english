@@ -1,0 +1,77 @@
+[
+  {
+    "lesson": 1,
+    "content": [
+      {
+        "id": 1,
+        "vocabulary": "app (application)",
+        "pronunciation": "/æp/",
+        "meaning": "a piece of computer software that does a particular job",
+        "example": "Examples of popular applications include Microsoft Office, Adobe, and Mozilla Firefox."
+      },
+      {
+        "id": 2,
+        "vocabulary": "computer",
+        "pronunciation": "/kəmˈpjuːtə/",
+        "meaning": "an electronic, digital device that stores and processes information",
+        "example": "A computer needs to be replaced or upgraded regularly or it will become obsolete."
+      },
+      {
+        "id": 3,
+        "vocabulary": "component",
+        "pronunciation": "/kəmˈpəʊnənt/",
+        "meaning": "any device internal to the computer (motherboard, hard disk, ...)",
+        "example": "A hardware geek is constantly upgrading components in his computer to achieve more performance."
+      },
+      {
+        "id": 4,
+        "vocabulary": "peripheral",
+        "pronunciation": "/pəˈrɪfərəl/",
+        "meaning": "an external computer add-on (printer, scanner, ...)",
+        "example": "The woman hated the look of all the tangled wires behind her desk, which were caused by so many peripherals."
+      },
+      {
+        "id": 5,
+        "vocabulary": "hardware",
+        "pronunciation": "/ˈhɑːdweə/",
+        "meaning": "physical things that make up a computer (components, peripherals, ...)",
+        "example": "The company has spent millions of dollars replacing outdated computer hardware."
+      },
+      {
+        "id": 6,
+        "vocabulary": "software",
+        "pronunciation": "/ˈsɒftweə/",
+        "meaning": "any program designed to run on a computer",
+        "example": "The geek purchased new software for his computer almost every weekend."
+      },
+      {
+        "id": 7,
+        "vocabulary": "Internet",
+        "pronunciation": "/ˈɪntənet/",
+        "meaning": "the largest known public network in the world, connecting millions of computers around the world",
+        "example": "Some people refer to the Internet as an information superhighway."
+      },
+      {
+        "id": 8,
+        "vocabulary": "network",
+        "pronunciation": "/ˈɪntənet/",
+        "meaning": "a group of connected computers that share resources",
+        "example": "The company network consisted of 3 servers, 95 workstations, and 10 printers."
+      },
+      {
+        "id": 9,
+        "vocabulary": "data",
+        "pronunciation": "/ˈdeɪtə/",
+        "meaning": "information or facts about a particular subject that someone has collected",
+        "example": "It's possible to store a lot more data on a hard disk."
+      },
+      {
+        "id": 10,
+        "vocabulary": "database",
+        "pronunciation": "/ˈdeɪtəˌbeɪs/",
+        "meaning": "a large amount of data stored in a computer system so that you can find and use it easily",
+        "example": "The company has a database of over 23,000 hotels that allow pets."
+      }
+    ]
+  }
+]
