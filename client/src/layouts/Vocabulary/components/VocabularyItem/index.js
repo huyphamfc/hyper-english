@@ -29,10 +29,17 @@ function VocabularyItem({
 }
 
 VocabularyItem.propTypes = {
-  vocabulary: PropTypes.string.isRequired,
-  pronunciation: PropTypes.string.isRequired,
-  meaning: PropTypes.string.isRequired,
-  example: PropTypes.string.isRequired,
+  vocabulary: PropTypes.string,
+  pronunciation: PropTypes.string,
+  meaning: PropTypes.string,
+  example: PropTypes.string,
+};
+
+VocabularyItem.defaultProps = {
+  vocabulary: null,
+  pronunciation: null,
+  meaning: null,
+  example: null,
 };
 
 export default VocabularyItem;

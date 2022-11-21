@@ -14,7 +14,7 @@ const publicRoutes = [
   },
   {
     id: 2,
-    path: '/vocabulary',
+    path: '/lesson/:lesson',
     component: Vocabulary,
     layout: null,
   },
