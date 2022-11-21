@@ -11,7 +11,7 @@ function Footer() {
       key={item.id}
       area={item.area}
       title={item.title}
-      contents={item.contents}
+      content={item.content}
     />
   ));
 
