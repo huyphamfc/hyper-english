@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import style from './Button.module.scss';
+import style from './style.module.scss';
 
 function Button({
   className,

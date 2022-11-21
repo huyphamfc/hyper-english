@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 import style from './style.module.scss';
-import Button from '../../../../components/Button/Button';
+import Button from '../../../../components/Button';
 
 function BackToTop() {
   const handleBackToTop = () => {
