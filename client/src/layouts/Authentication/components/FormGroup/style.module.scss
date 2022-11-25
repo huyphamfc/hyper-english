@@ -1,0 +1,24 @@
+@use '../../../../assets/scss/abstracts' as ab;
+
+.input {
+  width: 100%;
+
+  padding: 1.2rem 1.8rem;
+
+  border-radius: 4px;
+  border: 1px solid ab.$color-gray-light;
+
+  &:focus {
+    border-color: ab.$color-main;
+  }
+
+  &::placeholder {
+    color: ab.$color-gray-light;
+  }
+}
+
+.warning {
+  font-size: 1.4rem;
+  color: #ff0000;
+  padding: 1.2rem 1.8rem;
+}
