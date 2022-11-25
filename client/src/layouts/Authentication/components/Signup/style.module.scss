@@ -1,0 +1,29 @@
+@use '../../../../assets/scss/abstracts' as ab;
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 280px);
+  gap: 1.8rem;
+
+  & button {
+    justify-self: flex-start;
+  }
+}
+
+.action {
+  padding: 1.8rem 0;
+}
+
+@media (max-width: 44em) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 26em) {
+  .form {
+    & button {
+      justify-self: stretch;
+    }
+  }
+}
