@@ -1,0 +1,11 @@
+@use '../../../../assets/scss/abstracts' as ab;
+
+.form {
+  @include ab.flex(column, flex-start, stretch, 1.8rem);
+
+  width: 280px;
+}
+
+.action {
+  padding: 1.8rem 0;
+}
