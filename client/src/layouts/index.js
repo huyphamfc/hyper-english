@@ -9,5 +9,6 @@ export { default as Features } from './Features';
 export { default as Footer } from './Footer';
 export { default as BackToTop } from './BackToTop';
 
+export { default as Authentication } from './Authentication';
 export { default as Lessons } from './Lessons';
 export { default as Vocabulary } from './Vocabulary';
