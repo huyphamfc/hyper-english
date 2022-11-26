@@ -1,3 +1,3 @@
-import Products from './components/Products';
+import Products from './components/ProductsWrapper/ProductsWrapper';
 
 export default Products;

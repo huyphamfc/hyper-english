@@ -1,11 +1,11 @@
 /* eslint-disable no-underscore-dangle */
 import React from 'react';
 
-import style from './style.module.scss';
+import style from './ProductsWrapper.module.scss';
 import ProductItem from '../ProductItem';
 import useFetch from '../../../../hooks/useFetch';
 
-function Products() {
+function ProductsWrapper() {
   const { data } = useFetch('products');
 
   const products = data?.map((item) => (
@@ -26,4 +26,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default ProductsWrapper;
