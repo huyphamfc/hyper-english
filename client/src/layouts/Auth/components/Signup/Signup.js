@@ -2,17 +2,17 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import style from './style.module.scss';
+import style from './Signup.module.scss';
 import { Button } from '../../../../components';
 import FormGroup from '../FormGroup';
-import loginYupSchema from './loginYupSchema';
+import signupYupSchema from './signupYupSchema';
 
-function Login() {
+function Signup() {
   const {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm({ mode: 'onTouched', resolver: yupResolver(loginYupSchema) });
+  } = useForm({ mode: 'onTouched', resolver: yupResolver(signupYupSchema) });
 
   const submitForm = (payload, e) => {
     console.log(payload);
@@ -22,6 +22,11 @@ function Login() {
   return (
     <>
       <form className={style.form} onSubmit={handleSubmit(submitForm)}>
+        <FormGroup
+          inputProps={register('name')}
+          inputWarning={errors.name?.message}
+          inputPlaceholder="Name"
+        />
         <FormGroup
           inputProps={register('email')}
           inputWarning={errors.email?.message}
@@ -33,16 +38,22 @@ function Login() {
           inputPlaceholder="Password"
           inputType="password"
         />
-        <Button solid>Login</Button>
+        <FormGroup
+          inputProps={register('passwordConfirmation')}
+          inputWarning={errors.passwordConfirmation?.message}
+          inputPlaceholder="Password Confirmation"
+          inputType="password"
+        />
+        <Button solid>Sign up</Button>
       </form>
       <div className={style.action}>
-        <span>Create a new account?&nbsp;</span>
-        <Button underline to="/authentication/signup">
-          Signup
+        <span>Have an account already?&nbsp;</span>
+        <Button underline to="/auth/login">
+          Log in
         </Button>
       </div>
     </>
   );
 }
 
-export default Login;
+export default Signup;

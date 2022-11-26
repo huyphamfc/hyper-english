@@ -1,11 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import style from './style.module.scss';
+import style from './AuthWrapper.module.scss';
 import Signup from '../Signup';
 import Login from '../Login';
 
-function Authentication() {
+function AuthWrapper() {
   return (
     <section className={style.auth}>
       <div className={style.container}>
@@ -19,4 +19,4 @@ function Authentication() {
   );
 }
 
-export default Authentication;
+export default AuthWrapper;

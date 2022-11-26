@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import style from './style.module.scss';
+import style from './FormGroup.module.scss';
 
 // prettier-ignore
 function FormGroup({
