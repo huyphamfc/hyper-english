@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from './style.module.scss';
+import style from './Features.module.scss';
 import logo1 from '../../assets/icons/features-businessinsider.svg';
 import logo2 from '../../assets/icons/features-forbes.svg';
 import logo3 from '../../assets/icons/features-newyorktime.svg';
