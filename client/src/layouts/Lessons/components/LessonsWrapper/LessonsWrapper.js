@@ -1,10 +1,10 @@
 import React from 'react';
 
-import style from './style.module.scss';
+import style from './LessonsWrapper.module.scss';
 import LessonItem from '../LessonItem';
 import data from '../../data';
 
-function Lessons() {
+function LessonsWrapper() {
   const lessons = data.map((item) => (
     <LessonItem
       key={item.id}
@@ -20,4 +20,4 @@ function Lessons() {
   );
 }
 
-export default Lessons;
+export default LessonsWrapper;

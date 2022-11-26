@@ -1,3 +1,3 @@
-import Lessons from './components/Lessons';
+import Lessons from './components/LessonsWrapper/LessonsWrapper';
 
 export default Lessons;
