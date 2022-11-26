@@ -17,8 +17,17 @@
   }
 }
 
+.input--error,
+.input--error:focus {
+  border-color: ab.$color-error;
+}
+
 .warning {
   font-size: 1.4rem;
-  color: #ff0000;
+  color: ab.$color-gray-very-light;
   padding: 1.2rem 1.8rem;
+}
+
+.warning--error {
+  color: ab.$color-error;
 }
