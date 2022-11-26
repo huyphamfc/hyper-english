@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Observer from '../Observer';
 import BackToTopButton from '../BackToTopButton';
 
-function BackToTop({ Target, children }) {
+function BackToTopWrapper({ Target, children }) {
   const [showBackToTopBtn, setShowBackToTopBtn] = useState(true);
 
   const handleToggleBackToTopBtn = () => {
@@ -22,9 +22,9 @@ function BackToTop({ Target, children }) {
   );
 }
 
-BackToTop.propTypes = {
+BackToTopWrapper.propTypes = {
   Target: PropTypes.elementType.isRequired,
   children: PropTypes.node.isRequired,
 };
 
-export default BackToTop;
+export default BackToTopWrapper;

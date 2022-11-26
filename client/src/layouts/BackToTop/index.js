@@ -1,3 +1,3 @@
-import BackToTop from './components/BackToTop';
+import BackToTop from './components/BackToTopWrapper/BackToTopWrapper';
 
 export default BackToTop;
