@@ -1,11 +1,11 @@
 /* eslint-disable no-underscore-dangle */
 import React from 'react';
 
-import style from './style.module.scss';
+import style from './MissionsWrapper.module.scss';
 import MissionItem from '../MissionItem';
 import useFetch from '../../../../hooks/useFetch';
 
-function Missions() {
+function MissionsWrapper() {
   const { data } = useFetch('missions');
 
   const missions = data?.map((item) => (
@@ -29,4 +29,4 @@ function Missions() {
   );
 }
 
-export default Missions;
+export default MissionsWrapper;

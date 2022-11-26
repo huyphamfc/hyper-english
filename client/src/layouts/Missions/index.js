@@ -1,3 +1,3 @@
-import Missions from './components/Missions';
+import Missions from './components/MissionsWrapper/MissionsWrapper';
 
 export default Missions;
