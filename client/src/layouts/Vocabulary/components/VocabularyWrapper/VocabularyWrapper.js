@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router';
 
-import style from './style.module.scss';
+import style from './VocabularyWrapper.module.scss';
 import { Button } from '../../../../components';
 import Status from '../Status';
 import VocabularyItem from '../VocabularyItem';
 import Complete from '../Complete';
 import useFetch from '../../../../hooks/useFetch';
 
-function Vocabulary() {
+function VocabularyWrapper() {
   const [showModal, setShowModal] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const { lesson } = useParams();
@@ -59,4 +59,4 @@ function Vocabulary() {
   );
 }
 
-export default Vocabulary;
+export default VocabularyWrapper;

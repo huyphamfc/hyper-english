@@ -1,3 +1,3 @@
-import Vocabulary from './components/Vocabulary';
+import Vocabulary from './components/VocabularyWrapper/VocabularyWrapper';
 
 export default Vocabulary;
