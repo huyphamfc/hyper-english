@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from './style.module.scss';
+import style from './Application.module.scss';
 import { Button } from '../../components';
 import appIcon from '../../assets/icons/application-appstore.svg';
 import ggIcon from '../../assets/icons/application-ggplay.svg';
