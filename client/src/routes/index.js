@@ -1,6 +1,6 @@
 import Home from '../pages/Home';
 import { PageNotFound } from '../components';
-import { Authentication, Lessons, Vocabulary } from '../layouts';
+import { Auth, Lessons, Vocabulary } from '../layouts';
 
 const publicRoutes = [
   {
@@ -16,8 +16,8 @@ const publicRoutes = [
   },
   {
     id: 2,
-    path: '/authentication/*',
-    component: Authentication,
+    path: '/auth/*',
+    component: Auth,
     layout: null,
   },
   {
