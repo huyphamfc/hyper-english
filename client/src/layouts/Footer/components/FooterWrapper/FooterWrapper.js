@@ -1,11 +1,11 @@
 import React from 'react';
 
-import style from './style.module.scss';
+import style from './FooterWrapper.module.scss';
 import FooterBrand from '../FooterBrand';
 import FooterItem from '../FooterItem';
 import data from '../../data';
 
-function Footer() {
+function FooterWrapper() {
   const footerItems = data.map((item) => (
     <FooterItem
       key={item.id}
@@ -25,4 +25,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default FooterWrapper;
