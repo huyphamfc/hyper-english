@@ -1,10 +1,10 @@
 import React from 'react';
 
-import style from './style.module.scss';
+import style from './AboutWrapper.module.scss';
 import AboutItem from '../AboutItem';
 import useFetch from '../../../../hooks/useFetch';
 
-function About() {
+function AboutWrapper() {
   const { data } = useFetch('about');
 
   const about = data?.map((item) => (
@@ -31,4 +31,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutWrapper;
