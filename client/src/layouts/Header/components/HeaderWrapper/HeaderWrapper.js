@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
-import style from './style.module.scss';
+import style from './HeaderWrapper.module.scss';
 import { Button } from '../../../../components';
 import NavbarToggle from '../NavbarToggle';
 import Navbar from '../Navbar';
 
-function Header() {
+function HeaderWrapper() {
   const [showNavbar, setShowNavbar] = useState(false);
 
   const headerClass = classNames(style.header, {
@@ -41,4 +41,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderWrapper;
