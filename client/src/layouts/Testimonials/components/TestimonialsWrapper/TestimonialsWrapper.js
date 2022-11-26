@@ -4,11 +4,11 @@ import React from 'react';
 import Slider from 'react-slick';
 
 import './slick.css';
-import style from './style.module.scss';
+import style from './TestimonialsWrapper.module.scss';
 import TestimonialItem from '../TestimonialItem';
 import useFetch from '../../../../hooks/useFetch';
 
-function Testimonials() {
+function TestimonialsWrapper() {
   const { data } = useFetch('testimonials');
 
   const quotes = data?.map((item) => (
@@ -56,4 +56,4 @@ function Testimonials() {
   );
 }
 
-export default Testimonials;
+export default TestimonialsWrapper;
