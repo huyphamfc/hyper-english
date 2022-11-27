@@ -6,7 +6,7 @@ import Slider from 'react-slick';
 import './slick.css';
 import style from './TestimonialsWrapper.module.scss';
 import TestimonialItem from '../TestimonialItem';
-import useFetch from '../../../../hooks/useFetch';
+import { useFetch } from '../../../../hooks';
 
 function TestimonialsWrapper() {
   const { data } = useFetch('testimonials');

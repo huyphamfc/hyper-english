@@ -3,7 +3,7 @@ import React from 'react';
 
 import style from './MissionsWrapper.module.scss';
 import MissionItem from '../MissionItem';
-import useFetch from '../../../../hooks/useFetch';
+import { useFetch } from '../../../../hooks';
 
 function MissionsWrapper() {
   const { data } = useFetch('missions');
