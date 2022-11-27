@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router';
+import { useSelector } from 'react-redux';
+import { Navigate, useLocation, useParams } from 'react-router';
 
 import style from './VocabularyWrapper.module.scss';
 import { Button } from '../../../../components';
 import Status from '../Status';
 import VocabularyItem from '../VocabularyItem';
 import Complete from '../Complete';
-import { useFetch, useAuth } from '../../../../hooks';
+import { useFetch } from '../../../../hooks';
 
 function VocabularyWrapper() {
-  useAuth();
+  const { isAuth } = useSelector((state) => state.auth);
+  const location = useLocation();
+  if (!isAuth) {
+    return <Navigate to="/auth/login" state={{ from: location }} replace />;
+  }
+
   const [showModal, setShowModal] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const { lesson } = useParams();
