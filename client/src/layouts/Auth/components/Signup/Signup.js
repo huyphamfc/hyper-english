@@ -1,11 +1,14 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import style from './Signup.module.scss';
 import { Button } from '../../../../components';
 import FormGroup from '../FormGroup';
 import signupYupSchema from './signupYupSchema';
+import { login } from '../../../../store/authSlice';
 
 function Signup() {
   const {
@@ -14,9 +17,16 @@ function Signup() {
     handleSubmit,
   } = useForm({ mode: 'onTouched', resolver: yupResolver(signupYupSchema) });
 
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
   const submitForm = (payload, e) => {
     console.log(payload);
     e.target.reset();
+
+    dispatch(login());
+    navigate('/lessons', { replace: true });
   };
 
   return (
