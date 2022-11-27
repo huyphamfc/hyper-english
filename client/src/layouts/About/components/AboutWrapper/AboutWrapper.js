@@ -2,7 +2,7 @@ import React from 'react';
 
 import style from './AboutWrapper.module.scss';
 import AboutItem from '../AboutItem';
-import useFetch from '../../../../hooks/useFetch';
+import { useFetch } from '../../../../hooks';
 
 function AboutWrapper() {
   const { data } = useFetch('about');

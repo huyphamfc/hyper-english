@@ -3,7 +3,7 @@ import React from 'react';
 
 import style from './ProductsWrapper.module.scss';
 import ProductItem from '../ProductItem';
-import useFetch from '../../../../hooks/useFetch';
+import { useFetch } from '../../../../hooks';
 
 function ProductsWrapper() {
   const { data } = useFetch('products');
