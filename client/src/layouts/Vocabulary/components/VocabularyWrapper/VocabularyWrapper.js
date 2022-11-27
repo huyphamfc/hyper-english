@@ -6,9 +6,10 @@ import { Button } from '../../../../components';
 import Status from '../Status';
 import VocabularyItem from '../VocabularyItem';
 import Complete from '../Complete';
-import useFetch from '../../../../hooks/useFetch';
+import { useFetch, useAuth } from '../../../../hooks';
 
 function VocabularyWrapper() {
+  useAuth();
   const [showModal, setShowModal] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const { lesson } = useParams();

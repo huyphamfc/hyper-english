@@ -3,8 +3,11 @@ import React from 'react';
 import style from './LessonsWrapper.module.scss';
 import LessonItem from '../LessonItem';
 import data from '../../data';
+import { useAuth } from '../../../../hooks';
 
 function LessonsWrapper() {
+  useAuth();
+
   const lessons = data.map((item) => (
     <LessonItem
       key={item.id}
