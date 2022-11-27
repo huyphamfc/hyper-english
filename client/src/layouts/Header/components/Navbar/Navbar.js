@@ -37,7 +37,7 @@ function Navbar({ className, isOpenNavbar, toggleNavbar }) {
         </Button>
       </li>
       <li>
-        <Button solid to="/auth/signup" onClick={handleScrollTo}>
+        <Button solid to="/auth/login" onClick={handleScrollTo}>
           Join
         </Button>
       </li>
