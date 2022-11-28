@@ -1,0 +1,76 @@
+@use '../../../../assets/scss/abstracts' as ab;
+
+.profile {
+  position: relative;
+
+  .button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    &:focus + .info {
+      display: block;
+    }
+  }
+
+  .info {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 280px;
+
+    padding: 1.8rem;
+    text-align: center;
+
+    background-color: ab.$color-gray-very-light;
+    box-shadow: 0 0 2px 2px ab.$color-gray-light;
+    border-radius: 8px;
+
+    display: none;
+    transition: all 0.5s;
+
+    &::before {
+      position: absolute;
+      top: -6px;
+      right: 20px;
+      transform: rotate(45deg);
+
+      display: block;
+      width: 8px;
+      height: 8px;
+
+      content: '';
+
+      background-color: ab.$color-gray-very-light;
+
+      border-top: 2px solid ab.$color-gray-light;
+      border-left: 2px solid ab.$color-gray-light;
+    }
+  }
+
+  .item {
+    @include ab.flex(column, center, center, 0.8rem);
+
+    padding: 1.8rem 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid ab.$color-gray-light;
+    }
+  }
+
+  .img {
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .name {
+    font-weight: 700;
+  }
+
+  .email {
+    font-size: 1.6rem;
+  }
+}
