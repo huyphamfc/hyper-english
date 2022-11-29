@@ -7,6 +7,6 @@ const missionSchema = new mongoose.Schema({
   iconAlt: String,
 });
 
-const MissionModel = mongoose.model('mission', missionSchema);
+const MissionModel = mongoose.model('Mission', missionSchema);
 
 module.exports = MissionModel;

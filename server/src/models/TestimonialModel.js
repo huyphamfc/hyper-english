@@ -7,6 +7,6 @@ const testimonialSchema = new mongoose.Schema({
   avatarAlt: String,
 });
 
-const TestimonialModel = mongoose.model('testimonial', testimonialSchema);
+const TestimonialModel = mongoose.model('Testimonial', testimonialSchema);
 
 module.exports = TestimonialModel;
