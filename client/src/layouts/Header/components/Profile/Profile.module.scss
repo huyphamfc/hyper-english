@@ -7,17 +7,13 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-
-    &:focus + .info {
-      display: block;
-    }
   }
 
   .info {
     position: absolute;
-    top: 60px;
     right: 0;
     width: 280px;
+    display: none;
 
     padding: 1.8rem;
     text-align: center;
@@ -26,7 +22,6 @@
     box-shadow: 0 0 2px 2px ab.$color-gray-light;
     border-radius: 8px;
 
-    display: none;
     transition: all 0.5s;
 
     &::before {
@@ -42,7 +37,6 @@
       content: '';
 
       background-color: ab.$color-gray-very-light;
-
       border-top: 2px solid ab.$color-gray-light;
       border-left: 2px solid ab.$color-gray-light;
     }
@@ -72,5 +66,9 @@
 
   .email {
     font-size: 1.6rem;
+  }
+
+  &:hover .info {
+    display: block;
   }
 }
