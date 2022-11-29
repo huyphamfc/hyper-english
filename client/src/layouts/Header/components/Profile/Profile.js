@@ -1,12 +1,20 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 import style from './Profile.module.scss';
 import { Button } from '../../../../components';
+import { logout } from '../../../../store/authSlice';
 import avatar from '../../../../assets/images/avatar.jpg';
 
 function Profile() {
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
+
   return (
     <div className={style.profile}>
       <Button
@@ -23,7 +31,9 @@ function Profile() {
           <span className={style.email}>info@hyperenglish.com</span>
         </div>
         <div className={style.item}>
-          <Button transparent>Log out</Button>
+          <Button transparent onClick={handleLogout}>
+            Log out
+          </Button>
         </div>
       </div>
     </div>
