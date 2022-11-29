@@ -10,7 +10,7 @@ function LessonsWrapper() {
   const { isAuth } = useSelector((state) => state.auth);
   const location = useLocation();
   if (!isAuth) {
-    return <Navigate to="/auth/login" state={{ from: location }} replace />;
+    return <Navigate to="/" state={{ from: location }} replace />;
   }
 
   const lessons = data.map((item) => (

@@ -1,4 +1,6 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { Navigate, useLocation } from 'react-router-dom';
 
 import {
   HeroSection,
@@ -13,6 +15,13 @@ import {
 } from '../../layouts';
 
 function Home() {
+  const { isAuth } = useSelector((state) => state.auth);
+  const location = useLocation();
+
+  if (isAuth) {
+    return <Navigate to="/lessons" state={{ from: location }} replace />;
+  }
+
   return (
     <BackToTop Target={HeroSection}>
       <About />

@@ -13,7 +13,7 @@ function VocabularyWrapper() {
   const { isAuth } = useSelector((state) => state.auth);
   const location = useLocation();
   if (!isAuth) {
-    return <Navigate to="/auth/login" state={{ from: location }} replace />;
+    return <Navigate to="/" state={{ from: location }} replace />;
   }
 
   const [showModal, setShowModal] = useState(false);
