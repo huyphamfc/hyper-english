@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 const jwt = require('jsonwebtoken');
 
+const AppError = require('../utils/AppError');
 const catchError = require('../utils/catchError');
 const UserModel = require('../models/UserModel');
 
@@ -32,4 +33,22 @@ exports.signup = catchError(async (req, res) => {
   sendCookie(req, res, token);
 
   res.status(201).json({ status: 'success' });
+});
+
+exports.login = catchError(async (req, res) => {
+  const { email, password } = req.body;
+
+  const user = await UserModel.findOne({ email }).select('+password');
+  if (!user) throw new AppError(401, 'Your email or password is incorrect.');
+
+  const isPasswordCorrect = await user.verifyPassword(password, user.password);
+  if (!isPasswordCorrect) {
+    throw new AppError(401, 'Your email or password is incorrect.');
+  }
+
+  const token = signJWT(user._id);
+
+  sendCookie(req, res, token);
+
+  res.status(200).json({ status: 'success' });
 });
