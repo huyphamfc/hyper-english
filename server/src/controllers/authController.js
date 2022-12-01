@@ -52,3 +52,14 @@ exports.login = catchError(async (req, res) => {
 
   res.status(200).json({ status: 'success' });
 });
+
+exports.logout = (req, res) => {
+  res.cookie('jwt', '', {
+    expires: new Date(1),
+    httpOnly: true,
+    secure: req.secure || req.headers['x-forwarded-proto'] === 'https',
+    sameSite: 'none',
+  });
+
+  res.status(200).json({ status: 'success' });
+};
