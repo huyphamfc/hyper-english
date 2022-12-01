@@ -25,7 +25,11 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-app.use(helmet());
+app.use(
+  helmet({
+    crossOriginResourcePolicy: false,
+  }),
+);
 
 app.use(
   '/api',
