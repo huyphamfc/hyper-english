@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const limiter = require('express-rate-limit');
 
 const AppError = require('./utils/AppError');
 const handleGlobalError = require('./controllers/globalErrorController');
@@ -24,6 +25,15 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use(helmet());
+
+app.use(
+  '/api',
+  limiter({
+    windowMs: 60 * 60 * 1000,
+    max: 100,
+    message: 'Too many requests from this IP. Try again later.',
+  }),
+);
 
 app.use(express.json());
 
