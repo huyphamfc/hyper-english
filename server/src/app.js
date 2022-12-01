@@ -4,6 +4,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const limiter = require('express-rate-limit');
+const cookieParser = require('cookie-parser');
 
 const AppError = require('./utils/AppError');
 const handleGlobalError = require('./controllers/globalErrorController');
@@ -36,6 +37,8 @@ app.use(
 );
 
 app.use(express.json({ limit: '10kb' }));
+
+app.use(cookieParser());
 
 app.use('/api/public', express.static('public'));
 
