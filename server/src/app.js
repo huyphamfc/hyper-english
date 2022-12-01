@@ -1,6 +1,7 @@
 const dotenv = require('dotenv');
 const express = require('express');
 const cors = require('cors');
+const helmet = require('helmet');
 const morgan = require('morgan');
 
 const AppError = require('./utils/AppError');
@@ -21,6 +22,8 @@ const corsOptions = {
   credentials: true,
 };
 app.use(cors(corsOptions));
+
+app.use(helmet());
 
 app.use(express.json());
 
