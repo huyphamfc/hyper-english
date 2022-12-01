@@ -1,3 +1,5 @@
+const AppError = require('../utils/AppError');
+
 const sendErrDev = (err, res) => {
   console.error(err);
 
@@ -15,8 +17,11 @@ const sendErrProd = (err, res) => {
   });
 };
 
+const handleJWTErr = () =>
+  new AppError(401, 'Invalid signature. Please log in again!');
+
 module.exports = (err, req, res, next) => {
-  const processedErr = Object.assign(err);
+  let processedErr = Object.assign(err);
   processedErr.statusCode = processedErr.statusCode || 500;
   processedErr.status = processedErr.status || 'error';
   processedErr.message = processedErr.message || 'Something went wrong!';
@@ -28,6 +33,10 @@ module.exports = (err, req, res, next) => {
       sendErrDev(processedErr, res);
       break;
     case 'production':
+      if (processedErr.name === 'JsonWebTokenError') {
+        processedErr = handleJWTErr();
+      }
+
       sendErrProd(processedErr, res);
       break;
 
