@@ -10,6 +10,7 @@ const missionRouter = require('./routers/missionRouter');
 const productRouter = require('./routers/productRouter');
 const testimonialRouter = require('./routers/testimonialRouter');
 const vocabularyRouter = require('./routers/vocabularyRouter');
+const userRouter = require('./routers/userRouter');
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ app.use('/api/missions', missionRouter);
 app.use('/api/products', productRouter);
 app.use('/api/testimonials', testimonialRouter);
 app.use('/api/vocabulary/lesson/', vocabularyRouter);
+app.use('/api/user', userRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(404, `Cannot find ${req.originalUrl} on the server.`));
