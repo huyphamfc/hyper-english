@@ -23,6 +23,11 @@ const handleJWTErr = () =>
 const handleTokenExpiredErr = () =>
   new AppError(401, 'Expired permission. Please log in again!');
 
+const handleDuplicatedFieldErr = (err) => {
+  const value = Object.values(err.keyValue);
+  return new AppError(400, `${value} already exists.`);
+};
+
 module.exports = (err, req, res, next) => {
   let processedErr = Object.assign(err);
   processedErr.statusCode = processedErr.statusCode || 500;
@@ -42,6 +47,10 @@ module.exports = (err, req, res, next) => {
 
       if (processedErr.name === 'TokenExpiredError') {
         processedErr = handleTokenExpiredErr();
+      }
+
+      if (processedErr.code === 11000) {
+        processedErr = handleDuplicatedFieldErr(processedErr);
       }
 
       sendErrProd(processedErr, res);
