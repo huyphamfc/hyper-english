@@ -20,6 +20,9 @@ const sendErrProd = (err, res) => {
 const handleJWTErr = () =>
   new AppError(401, 'Invalid signature. Please log in again!');
 
+const handleTokenExpiredErr = () =>
+  new AppError(401, 'Expired permission. Please log in again!');
+
 module.exports = (err, req, res, next) => {
   let processedErr = Object.assign(err);
   processedErr.statusCode = processedErr.statusCode || 500;
@@ -35,6 +38,10 @@ module.exports = (err, req, res, next) => {
     case 'production':
       if (processedErr.name === 'JsonWebTokenError') {
         processedErr = handleJWTErr();
+      }
+
+      if (processedErr.name === 'TokenExpiredError') {
+        processedErr = handleTokenExpiredErr();
       }
 
       sendErrProd(processedErr, res);
