@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useDispatch } from 'react-redux';
@@ -21,12 +21,36 @@ function Signup() {
 
   const navigate = useNavigate();
 
-  const submitForm = (payload, e) => {
-    console.log(payload);
-    e.target.reset();
+  const [notification, setNotification] = useState(null);
 
-    dispatch(login());
-    navigate('/lessons', { replace: true });
+  const submitForm = async (payload) => {
+    setNotification('Processing...');
+
+    try {
+      const { name, email, password } = payload;
+
+      const res = await fetch(
+        `${process.env.REACT_APP_SERVER_URL}/user/signup`,
+        {
+          method: 'POST',
+          credentials: 'include',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, password }),
+        },
+      );
+
+      if (!res.ok) {
+        const err = await res.json();
+        setNotification(err.message);
+      } else {
+        dispatch(login());
+        navigate('/lessons', { replace: true });
+      }
+    } catch (err) {
+      setNotification('Internal Server Error.');
+    }
   };
 
   return (
@@ -54,6 +78,9 @@ function Signup() {
           inputPlaceholder="Password Confirmation"
           inputType="password"
         />
+        {notification && (
+          <span className={style.notification}>{notification}</span>
+        )}
         <Button solid>Sign up</Button>
       </form>
       <div className={style.action}>
