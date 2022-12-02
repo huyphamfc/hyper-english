@@ -11,7 +11,10 @@ import avatar from '../../../../assets/images/avatar.jpg';
 function Profile() {
   const dispatch = useDispatch();
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    await fetch(`${process.env.REACT_APP_SERVER_URL}/user/logout`, {
+      credentials: 'include',
+    });
     dispatch(logout());
   };
 
