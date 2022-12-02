@@ -54,7 +54,7 @@ app.use('/api/missions', missionRouter);
 app.use('/api/products', productRouter);
 app.use('/api/testimonials', testimonialRouter);
 app.use('/api/lessons', lessonRouter);
-app.use('/api/vocabulary/lesson/', vocabularyRouter);
+app.use('/api/vocabulary', vocabularyRouter);
 app.use('/api/user', userRouter);
 
 app.all('*', (req, res, next) => {
