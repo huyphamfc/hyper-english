@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,6 +9,7 @@ import { logout } from '../../../../store/authSlice';
 import avatar from '../../../../assets/images/avatar.jpg';
 
 function Profile() {
+  const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
   const handleLogout = async () => {
@@ -30,8 +31,8 @@ function Profile() {
           <div className={style.img}>
             <img src={avatar} alt="Avatar" />
           </div>
-          <span className={style.name}>HyperEnglish</span>
-          <span className={style.email}>info@hyperenglish.com</span>
+          <span className={style.name}>{user.name}</span>
+          <span className={style.email}>{user.email}</span>
         </div>
         <div className={style.item}>
           <Button transparent onClick={handleLogout}>
