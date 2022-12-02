@@ -12,6 +12,7 @@ const aboutRouter = require('./routers/aboutRouter');
 const missionRouter = require('./routers/missionRouter');
 const productRouter = require('./routers/productRouter');
 const testimonialRouter = require('./routers/testimonialRouter');
+const lessonRouter = require('./routers/lessonRouter');
 const vocabularyRouter = require('./routers/vocabularyRouter');
 const userRouter = require('./routers/userRouter');
 
@@ -52,6 +53,7 @@ app.use('/api/about', aboutRouter);
 app.use('/api/missions', missionRouter);
 app.use('/api/products', productRouter);
 app.use('/api/testimonials', testimonialRouter);
+app.use('/api/lessons', lessonRouter);
 app.use('/api/vocabulary/lesson/', vocabularyRouter);
 app.use('/api/user', userRouter);
 
