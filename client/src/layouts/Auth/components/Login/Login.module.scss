@@ -4,6 +4,15 @@
   @include ab.flex(column, flex-start, stretch, 1.8rem);
 
   width: 280px;
+
+  .notification {
+    grid-column: 1/-1;
+
+    font-size: 1.4rem;
+    color: ab.$color-error;
+
+    padding: 1.2rem 1.8rem;
+  }
 }
 
 .action {
