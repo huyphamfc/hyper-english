@@ -27,8 +27,6 @@ function Signup() {
     setNotification('Processing...');
 
     try {
-      const { name, email, password } = payload;
-
       const res = await fetch(
         `${process.env.REACT_APP_SERVER_URL}/user/signup`,
         {
@@ -37,17 +35,20 @@ function Signup() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ name, email, password }),
+          body: JSON.stringify({ ...payload }),
         },
       );
 
+      const result = await res.json();
+
       if (!res.ok) {
-        const err = await res.json();
-        setNotification(err.message);
-      } else {
-        dispatch(login());
-        navigate('/lessons', { replace: true });
+        setNotification(result.message);
+        return;
       }
+
+      const { name, email } = result.data;
+      dispatch(login({ name, email }));
+      navigate('/lessons', { replace: true });
     } catch (err) {
       setNotification('Internal Server Error.');
     }
