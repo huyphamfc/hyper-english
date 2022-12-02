@@ -5,14 +5,14 @@ const AppError = require('../utils/AppError');
 const catchError = require('../utils/catchError');
 const UserModel = require('../models/UserModel');
 
-// prettier-ignore
-const signJWT = (id) => jwt.sign(
-  { id },
-  process.env.JWT_PRIVATE_KEY,
-  { expiresIn: process.env.JWT_EXPIRATION },
-);
+const responseToClient = (req, res, statusCode, user) => {
+  // prettier-ignore
+  const token = jwt.sign(
+    { id: user._id },
+    process.env.JWT_PRIVATE_KEY,
+    { expiresIn: process.env.JWT_EXPIRATION },
+  );
 
-const sendCookie = (req, res, token) => {
   res.cookie('jwt', token, {
     expires: new Date(
       Date.now() + process.env.COOKIE_EXPIRATION * 24 * 60 * 60 * 1000,
@@ -21,6 +21,14 @@ const sendCookie = (req, res, token) => {
     secure: req.secure || req.headers['x-forwarded-proto'] === 'https',
     sameSite: 'none',
   });
+
+  res.status(statusCode).json({
+    status: 'success',
+    data: {
+      name: user.name,
+      email: user.email,
+    },
+  });
 };
 
 exports.signup = catchError(async (req, res) => {
@@ -28,11 +36,7 @@ exports.signup = catchError(async (req, res) => {
 
   const user = await UserModel.create({ name, email, password });
 
-  const token = signJWT(user._id);
-
-  sendCookie(req, res, token);
-
-  res.status(201).json({ status: 'success' });
+  responseToClient(req, res, 201, user);
 });
 
 exports.login = catchError(async (req, res) => {
@@ -46,11 +50,7 @@ exports.login = catchError(async (req, res) => {
     throw new AppError(401, 'Your email or password is incorrect.');
   }
 
-  const token = signJWT(user._id);
-
-  sendCookie(req, res, token);
-
-  res.status(200).json({ status: 'success' });
+  responseToClient(req, res, 200, user);
 });
 
 exports.logout = (req, res) => {
