@@ -19,7 +19,9 @@ function VocabularyWrapper() {
   const [showModal, setShowModal] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const { lesson } = useParams();
-  const { content } = useFetch(`vocabulary/${lesson}`);
+  const { content } = useFetch(`vocabulary/${lesson}`, {
+    credentials: 'include',
+  });
 
   const processStatus = content && ((currentIndex + 1) / content.length) * 100;
 
