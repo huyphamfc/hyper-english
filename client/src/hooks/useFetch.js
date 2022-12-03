@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 function useFetch(param, options = {}) {
   const [data, setData] = useState({});
 
+  console.log('useFetch performs');
+
   useEffect(() => {
     fetch(`${process.env.REACT_APP_SERVER_URL}/${param}`, options)
       .then((res) => res.json())

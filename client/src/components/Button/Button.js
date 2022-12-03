@@ -33,6 +33,8 @@ function Button({
   if (href) Comp = 'a';
   if (to) Comp = Link;
 
+  console.log('Render: Button');
+
   return (
     <Comp
       className={`${className} ${btnClass}`}
