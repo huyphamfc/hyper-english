@@ -63,3 +63,21 @@ exports.logout = (req, res) => {
 
   res.status(200).json({ status: 'success' });
 };
+
+exports.protectRoute = catchError(async (req, res, next) => {
+  const token = req.cookies?.jwt;
+  if (!token) throw new AppError(401, 'Please log in to access.');
+  const decodedToken = jwt.verify(token, process.env.JWT_PRIVATE_KEY);
+
+  const user = await UserModel.findById(decodedToken.id);
+  if (!user) {
+    throw new AppError(401, 'The user no longer exists. Please log in again!');
+  }
+
+  const isPasswordChange = user.isPasswordChange(decodedToken.iat);
+  if (isPasswordChange) {
+    throw new AppError(401, 'The password has changed. Please log in again!');
+  }
+
+  next();
+});
