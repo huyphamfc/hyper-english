@@ -24,6 +24,8 @@ function App() {
     );
   });
 
+  console.log('Render: App');
+
   return (
     <BrowserRouter>
       <Routes>{routes}</Routes>

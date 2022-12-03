@@ -5,6 +5,8 @@ import img from '../../assets/icons/page-not-found.svg';
 import Button from '../Button';
 
 function PageNotFound() {
+  console.log('Render: PageNotFound');
+
   return (
     <section className={style.page}>
       <div className={style.container}>
