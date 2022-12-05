@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import { useSelector } from 'react-redux';
 import classNames from 'classnames';
 
@@ -23,6 +23,8 @@ function HeaderWrapper() {
   };
 
   const homeRoute = isAuth ? '/lessons' : '/';
+
+  console.log('Render: HeaderWrapper');
 
   return (
     <header className={headerClass}>
@@ -51,4 +53,4 @@ function HeaderWrapper() {
   );
 }
 
-export default HeaderWrapper;
+export default memo(HeaderWrapper);
