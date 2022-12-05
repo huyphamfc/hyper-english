@@ -18,8 +18,6 @@ function ProductsWrapper() {
     />
   ));
 
-  console.log('Render: ProductsWrapper');
-
   return (
     <section className={style.products} id="products">
       <h2 className={style.heading}>Learn what you&apos;re interested in</h2>

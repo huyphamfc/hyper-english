@@ -6,8 +6,6 @@ import Signup from '../Signup';
 import Login from '../Login';
 
 function AuthWrapper() {
-  console.log('Render: AuthWrapper');
-
   return (
     <section className={style.auth}>
       <div className={style.container}>

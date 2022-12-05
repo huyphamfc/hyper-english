@@ -9,16 +9,12 @@ function HeroSection({ toggleBackToTop }) {
   const targetRef = useRef();
 
   useEffect(() => {
-    console.log('IntersectionObserver');
-
     const options = { threshold: 0 };
     const observer = new IntersectionObserver(toggleBackToTop, options);
     observer.observe(targetRef.current);
 
     return () => observer.disconnect();
   }, []);
-
-  console.log('Render: HeroSection');
 
   return (
     <section className={style.grid} ref={targetRef}>

@@ -54,8 +54,6 @@ function Signup() {
     }
   };
 
-  console.log('Render: Signup');
-
   return (
     <>
       <form className={style.form} onSubmit={handleSubmit(submitForm)}>

@@ -24,8 +24,6 @@ function HeaderWrapper() {
 
   const homeRoute = isAuth ? '/lessons' : '/';
 
-  console.log('Render: HeaderWrapper');
-
   return (
     <header className={headerClass}>
       <nav className={style.nav}>

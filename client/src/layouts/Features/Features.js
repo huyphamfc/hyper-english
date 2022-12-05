@@ -7,8 +7,6 @@ import logo3 from '../../assets/icons/features-newyorktime.svg';
 import logo4 from '../../assets/icons/features-techcrunch.svg';
 
 function Features() {
-  console.log('Render: Feature');
-
   return (
     <section className={style.features}>
       <div className={style.container}>

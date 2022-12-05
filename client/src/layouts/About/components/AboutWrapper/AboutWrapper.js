@@ -18,8 +18,6 @@ function AboutWrapper() {
     />
   ));
 
-  console.log('Render: AboutWrapper');
-
   return (
     <section className={style.about} id="about">
       <div className={style.container}>

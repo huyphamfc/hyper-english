@@ -21,8 +21,6 @@ function HomeWrapper() {
     setShowBackToTop((state) => !state);
   }, []);
 
-  console.log('Render: Home');
-
   return (
     <>
       <Header />

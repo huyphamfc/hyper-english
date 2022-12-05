@@ -7,8 +7,6 @@ import ggIcon from '../../assets/icons/application-ggplay.svg';
 import image from '../../assets/images/application.svg';
 
 function Application() {
-  console.log('Render: Application');
-
   return (
     <section className={style.grid}>
       <div className={style.container}>
