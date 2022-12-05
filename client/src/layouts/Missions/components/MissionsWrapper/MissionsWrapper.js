@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import React from 'react';
+import React, { memo } from 'react';
 
 import style from './MissionsWrapper.module.scss';
 import MissionItem from '../MissionItem';
@@ -18,6 +18,8 @@ function MissionsWrapper() {
     />
   ));
 
+  console.log('Render: MissionsWrapper');
+
   return (
     <section className={style.missions}>
       <h2 className={style.heading}>
@@ -29,4 +31,4 @@ function MissionsWrapper() {
   );
 }
 
-export default MissionsWrapper;
+export default memo(MissionsWrapper);
