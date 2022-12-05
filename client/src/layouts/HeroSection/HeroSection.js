@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { memo, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 
 import style from './HeroSection.module.scss';
 import { Button } from '../../components';
 import image from '../../assets/images/hero-illustration.svg';
 
-function HeroSection() {
+function HeroSection({ toggleBackToTop }) {
+  const targetRef = useRef();
+
+  useEffect(() => {
+    console.log('IntersectionObserver');
+
+    const options = { threshold: 0 };
+    const observer = new IntersectionObserver(toggleBackToTop, options);
+    observer.observe(targetRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  console.log('Render: HeroSection');
+
   return (
-    <section className={style.grid}>
+    <section className={style.grid} ref={targetRef}>
       <div className={style.container}>
         <div className={style.text}>
           <h3 className={style.heading}>English for IT</h3>
@@ -31,4 +46,8 @@ function HeroSection() {
   );
 }
 
-export default HeroSection;
+HeroSection.propTypes = {
+  toggleBackToTop: PropTypes.func.isRequired,
+};
+
+export default memo(HeroSection);
