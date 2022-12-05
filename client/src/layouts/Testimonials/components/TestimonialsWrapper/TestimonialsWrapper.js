@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { memo } from 'react';
 import Slider from 'react-slick';
 
 import './slick.css';
@@ -46,6 +46,8 @@ function TestimonialsWrapper() {
     ],
   };
 
+  console.log('Render: TestimonialsWrapper');
+
   return (
     <section className={style.testimonials}>
       <div className={style.container}>
@@ -56,4 +58,4 @@ function TestimonialsWrapper() {
   );
 }
 
-export default TestimonialsWrapper;
+export default memo(TestimonialsWrapper);
