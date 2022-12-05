@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import style from './Application.module.scss';
 import { Button } from '../../components';
@@ -7,6 +7,8 @@ import ggIcon from '../../assets/icons/application-ggplay.svg';
 import image from '../../assets/images/application.svg';
 
 function Application() {
+  console.log('Render: Application');
+
   return (
     <section className={style.grid}>
       <div className={style.container}>
@@ -42,4 +44,4 @@ function Application() {
   );
 }
 
-export default Application;
+export default memo(Application);
