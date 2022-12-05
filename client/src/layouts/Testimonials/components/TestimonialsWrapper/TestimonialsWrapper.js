@@ -46,8 +46,6 @@ function TestimonialsWrapper() {
     ],
   };
 
-  console.log('Render: TestimonialsWrapper');
-
   return (
     <section className={style.testimonials}>
       <div className={style.container}>

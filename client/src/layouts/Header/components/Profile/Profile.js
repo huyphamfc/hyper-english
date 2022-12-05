@@ -19,8 +19,6 @@ function Profile() {
     dispatch(logout());
   };
 
-  console.log('Render: Profile');
-
   return (
     <div className={style.profile}>
       <Button

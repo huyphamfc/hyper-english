@@ -18,8 +18,6 @@ function MissionsWrapper() {
     />
   ));
 
-  console.log('Render: MissionsWrapper');
-
   return (
     <section className={style.missions}>
       <h2 className={style.heading}>

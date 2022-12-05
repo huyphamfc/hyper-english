@@ -14,8 +14,6 @@ function BackToTopButton() {
     });
   };
 
-  console.log('Render: BackToTopButton');
-
   return (
     <Button className={style.button} onClick={handleBackToTop}>
       <FontAwesomeIcon icon={faArrowUp} />

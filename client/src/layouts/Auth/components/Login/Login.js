@@ -54,8 +54,6 @@ function Login() {
     }
   };
 
-  console.log('Render: Login');
-
   return (
     <>
       <form className={style.form} onSubmit={handleSubmit(submitForm)}>

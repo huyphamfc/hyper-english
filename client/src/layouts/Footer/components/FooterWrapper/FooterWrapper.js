@@ -15,8 +15,6 @@ function FooterWrapper() {
     />
   ));
 
-  console.log('Render: FooterWrapper');
-
   return (
     <footer className={style.footer} id="contact">
       <div className={style.container}>

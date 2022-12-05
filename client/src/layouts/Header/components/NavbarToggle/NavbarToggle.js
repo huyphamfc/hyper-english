@@ -9,8 +9,6 @@ import { Button } from '../../../../components';
 function NavbarToggle({ isShowIcon, toggleNavbar }) {
   const toggleIcon = isShowIcon ? faXmark : faBars;
 
-  console.log('Render: NavbarToggle');
-
   return (
     <Button
       className={style.toggle}

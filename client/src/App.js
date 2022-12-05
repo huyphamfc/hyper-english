@@ -9,8 +9,6 @@ function App() {
     return <Route key={route.id} path={route.path} element={<Content />} />;
   });
 
-  console.log('Render: App');
-
   return (
     <BrowserRouter>
       <Routes>{routes}</Routes>
