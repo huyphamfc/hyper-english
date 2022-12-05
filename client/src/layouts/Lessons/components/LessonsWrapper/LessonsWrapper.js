@@ -23,6 +23,8 @@ function LessonsWrapper() {
     />
   ));
 
+  console.log('Render: LessonsWrapper');
+
   return (
     <section className={style.lessons}>
       <ul className={style.items}>{lessons}</ul>

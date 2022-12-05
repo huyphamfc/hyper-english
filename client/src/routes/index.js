@@ -1,6 +1,6 @@
-import Home from '../pages/Home';
+import { Home, Lessons } from '../pages';
 import { PageNotFound } from '../components';
-import { Auth, Lessons, Vocabulary } from '../layouts';
+import { Auth, Vocabulary } from '../layouts';
 
 const publicRoutes = [
   {
