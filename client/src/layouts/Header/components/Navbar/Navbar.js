@@ -14,6 +14,8 @@ function Navbar({ className, isOpenNavbar, toggleNavbar }) {
     if (isOpenNavbar) toggleNavbar();
   };
 
+  console.log('Render: Navbar');
+
   return (
     <ul className={navbarClass}>
       <li>
