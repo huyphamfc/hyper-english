@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import style from './AboutWrapper.module.scss';
 import AboutItem from '../AboutItem';
@@ -18,6 +18,8 @@ function AboutWrapper() {
     />
   ));
 
+  console.log('Render: AboutWrapper');
+
   return (
     <section className={style.about} id="about">
       <div className={style.container}>
@@ -31,4 +33,4 @@ function AboutWrapper() {
   );
 }
 
-export default AboutWrapper;
+export default memo(AboutWrapper);
