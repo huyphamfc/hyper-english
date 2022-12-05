@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import React from 'react';
+import React, { memo } from 'react';
 
 import style from './ProductsWrapper.module.scss';
 import ProductItem from '../ProductItem';
@@ -18,6 +18,8 @@ function ProductsWrapper() {
     />
   ));
 
+  console.log('Render: ProductsWrapper');
+
   return (
     <section className={style.products} id="products">
       <h2 className={style.heading}>Learn what you&apos;re interested in</h2>
@@ -26,4 +28,4 @@ function ProductsWrapper() {
   );
 }
 
-export default ProductsWrapper;
+export default memo(ProductsWrapper);
