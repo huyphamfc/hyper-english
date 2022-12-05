@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 import style from './BackToTopButton.module.scss';
-import { Button } from '../../../../components';
+import { Button } from '../../components';
 
-function BackToTop() {
+function BackToTopButton() {
   const handleBackToTop = () => {
     window.scrollTo({
       top: 0,
@@ -14,6 +14,8 @@ function BackToTop() {
     });
   };
 
+  console.log('Render: BackToTopButton');
+
   return (
     <Button className={style.button} onClick={handleBackToTop}>
       <FontAwesomeIcon icon={faArrowUp} />
@@ -21,4 +23,4 @@ function BackToTop() {
   );
 }
 
-export default BackToTop;
+export default BackToTopButton;
