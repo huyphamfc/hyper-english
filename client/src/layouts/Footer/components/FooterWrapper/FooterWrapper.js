@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import style from './FooterWrapper.module.scss';
 import FooterBrand from '../FooterBrand';
@@ -15,6 +15,8 @@ function FooterWrapper() {
     />
   ));
 
+  console.log('Render: FooterWrapper');
+
   return (
     <footer className={style.footer} id="contact">
       <div className={style.container}>
@@ -25,4 +27,4 @@ function FooterWrapper() {
   );
 }
 
-export default FooterWrapper;
+export default memo(FooterWrapper);
