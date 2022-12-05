@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import style from './Features.module.scss';
 import logo1 from '../../assets/icons/features-businessinsider.svg';
@@ -7,6 +7,8 @@ import logo3 from '../../assets/icons/features-newyorktime.svg';
 import logo4 from '../../assets/icons/features-techcrunch.svg';
 
 function Features() {
+  console.log('Render: Feature');
+
   return (
     <section className={style.features}>
       <div className={style.container}>
@@ -22,4 +24,4 @@ function Features() {
   );
 }
 
-export default Features;
+export default memo(Features);
