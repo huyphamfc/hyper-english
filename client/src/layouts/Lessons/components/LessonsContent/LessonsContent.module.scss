@@ -1,0 +1,19 @@
+@use '../../../../assets/scss/abstracts' as ab;
+
+.lessons {
+  @extend %wrapper;
+  padding: 13.6rem 3.2rem 3.2rem;
+
+  .items {
+    @include ab.flex(row, flex-start, center, 2.4rem);
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 66em) {
+  .lessons {
+    .items {
+      justify-content: center;
+    }
+  }
+}
