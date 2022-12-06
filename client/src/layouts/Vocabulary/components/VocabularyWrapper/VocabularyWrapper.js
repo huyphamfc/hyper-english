@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Navigate, useLocation, useParams } from 'react-router';
+import { Navigate, useParams } from 'react-router';
 
 import style from './VocabularyWrapper.module.scss';
 import { Button } from '../../../../components';
@@ -11,9 +11,8 @@ import { useFetch } from '../../../../hooks';
 
 function VocabularyWrapper() {
   const { isAuth } = useSelector((state) => state.auth);
-  const location = useLocation();
   if (!isAuth) {
-    return <Navigate to="/" state={{ from: location }} replace />;
+    return <Navigate to="/" replace />;
   }
 
   const [showModal, setShowModal] = useState(false);
