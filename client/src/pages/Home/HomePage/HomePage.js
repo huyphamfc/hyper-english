@@ -1,4 +1,6 @@
 import React, { useState, useCallback } from 'react';
+import { useSelector } from 'react-redux';
+import { Navigate } from 'react-router';
 
 import {
   Header,
@@ -10,11 +12,14 @@ import {
   Application,
   Features,
   Footer,
-} from '../../layouts';
+} from '../../../layouts';
 
-import BackToTopButton from './BackToTopButton';
+import BackToTopButton from '../BackToTopButton';
 
-function HomeWrapper() {
+function HomePage() {
+  const { isAuth } = useSelector((state) => state.auth);
+  if (isAuth) return <Navigate to="/lessons" />;
+
   const [showBackToTop, setShowBackToTop] = useState(true);
 
   const handleBackToTop = useCallback(() => {
@@ -37,4 +42,4 @@ function HomeWrapper() {
   );
 }
 
-export default HomeWrapper;
+export default HomePage;
