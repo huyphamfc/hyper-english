@@ -1,2 +1,2 @@
 export { default as Home } from './Home';
-export { default as Lessons } from './Lessons/Lessons';
+export { default as Lessons } from './Lessons/LessonsPage';
