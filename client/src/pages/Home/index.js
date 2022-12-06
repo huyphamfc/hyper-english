@@ -1,3 +1,3 @@
-import Home from './HomeWrapper';
+import Home from './HomePage/HomePage';
 
 export default Home;
