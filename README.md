@@ -31,4 +31,89 @@ Server:&nbsp;
 
 ![](./docs/images/overview.png)
 
+&nbsp;
+
+**Folder structure**:
+
+```text
+root/
+├── client/
+│   ├── public/
+│   ├── src/
+|   |   ├── assets/
+|   |   |   ├── scss/
+|   |   |   └── ....
+|   |   |
+|   |   ├── components/
+|   |   |   ├── GlobalStyles/
+|   |   |   ├── Button/
+|   |   |   ├── PageNotFound/
+|   |   │   └── index.js
+|   |   |
+|   |   ├── hooks/
+|   |   |   ├── useFetch.js
+|   |   │   └── index.js
+|   |   |
+|   |   ├── layouts/
+|   |   |   ├── About/
+|   |   |   ├── Application/
+|   |   |   ├── Auth/
+|   |   |   ├── Features/
+|   |   |   ├── Footer/
+|   |   |   ├── Header/
+|   |   |   ├── HeroSection/
+|   |   |   ├── Lessons/
+|   |   |   ├── Missions/
+|   |   |   ├── Products/
+|   |   |   ├── Testimonials/
+|   |   |   ├── Vocabulary/
+|   |   │   └── index.js
+|   |   |
+|   |   ├── pages/
+|   |   |   ├── Home/
+|   |   |   ├── Lessons/
+|   |   │   └── index.js
+|   |   |
+|   |   ├── routes/
+|   |   │   └── index.js
+|   |   |
+|   |   └── store/
+|   |       ├── authSlice.js
+|   |       ├── store.js
+|   |       └── index.js
+|   |
+│   ├── App.js
+|   └── index.js
+|
+|
+└── server/
+    ├── public/
+    ├── src/
+    |   ├── controllers/
+    |   |   ├── authController.js
+    |   |   ├── globalErrorController.js
+    |   |   ├── vocabularyController.js
+    |   |   └── ....
+    |   |
+    |   ├── models/
+    |   |   ├── UserModel.js
+    |   |   ├── VocabularyModel.js
+    |   |   └── ....
+    |   |
+    |   ├── routers/
+    |   |   ├── userRouter.js
+    |   |   |── vocabularyRouter.js
+    |   |   └── ....
+    |   |
+    |   └── utils/
+    |       ├── AppError.js
+    |       ├── catchError.js
+    |       └── ....
+    |
+    ├── app.js
+    └── index.js
+```
+
+&nbsp;
+
 &copy; [huyphamfc](https://github.com/huyphamfc)
