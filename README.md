@@ -122,4 +122,12 @@ root/
 
 &nbsp;
 
+## 1. Client
+
+### 1.1. React DOM tree
+
+![](./docs/images/react-dom-tree.svg)
+
+&nbsp;
+
 &copy; [huyphamfc](https://github.com/huyphamfc)
