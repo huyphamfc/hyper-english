@@ -116,4 +116,10 @@ root/
 
 &nbsp;
 
+**Project architecture**:
+
+![](./docs/images/architecture.svg)
+
+&nbsp;
+
 &copy; [huyphamfc](https://github.com/huyphamfc)
