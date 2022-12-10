@@ -130,4 +130,36 @@ root/
 
 &nbsp;
 
+### 1.2. Fetch data from the server
+
+Create a custom hook to fetch data:
+
+```js
+function useFetch(param, options = {}) {
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/${param}`, options)
+      .then((res) => res.json())
+      .then((result) => setData(result));
+  }, [param]);
+
+  return data;
+}
+```
+
+&nbsp;
+
+![](./docs/images/about-flow-chart.png)
+
+![](./docs/images/missions-flow-chart.png)
+
+![](./docs/images/products-flow-chart.png)
+
+![](./docs/images/testimonials-flow-chart.png)
+
+![](./docs/images/vocabulary-flow-chart.png)
+
+&nbsp;
+
 &copy; [huyphamfc](https://github.com/huyphamfc)
