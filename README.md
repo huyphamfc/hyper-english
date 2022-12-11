@@ -162,4 +162,46 @@ function useFetch(param, options = {}) {
 
 &nbsp;
 
+### 1.3. Scroll to top of the web page
+
+Implement scrolling to the top of the page by using `Window.scrollTo()` method that a particular set of coordinates in the document.
+
+![](./docs/images/window-scroll.svg)
+
+&nbsp;
+
+**Show/hide BackToTop button**
+
+**Solution 1**: create a scroll event to track the position of window relative to the horizontal axis of the document and then show or hide the `BackToTop` button. &rarr; the scroll event listener triggers whenever the user scrolls the page, which **affects the application performance**.
+
+```js
+window.addEventListener('scroll', () => {
+  if (window.scrollY > value) {
+    // show BackToTop button
+    return;
+  }
+
+  // hide BackToTop button
+});
+```
+
+**Solution 2**: use **IntersectionObserver** API to track asynchronously the target element intersects the viewport(window) or not and then show or hide the `BackToTop` button. &rarr; **improve the application performance**.
+
+```js
+const handleIntersect = () => {
+  // toggle BackToTop button
+};
+
+const options = { root, rootMargin, threshold };
+
+const observer = new IntersectionObserver(handleIntersect, options);
+observer.observe(target element)
+```
+
+&nbsp;
+
+![](./docs/images/intersection-observer.svg)
+
+&nbsp;
+
 &copy; [huyphamfc](https://github.com/huyphamfc)
