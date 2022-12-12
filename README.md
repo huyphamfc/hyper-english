@@ -204,4 +204,14 @@ observer.observe(target element)
 
 &nbsp;
 
+### 1.4. Form Validation
+
+Before submitting data to the server, we need to make sure all form fields are filled out and in the correct format. This is called client-side form validation. It **reduces server** tasks (server-side form validation) and **saves resources** that the client and server must transform info to each other more times when the form is invalid.
+
+Using React Hook Form with Yup library to validate the form.
+
+![](./docs/images/form-validation.svg)
+
+&nbsp;
+
 &copy; [huyphamfc](https://github.com/huyphamfc)
