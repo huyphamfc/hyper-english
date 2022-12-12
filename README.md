@@ -214,4 +214,18 @@ Using React Hook Form with Yup library to validate the form.
 
 &nbsp;
 
+### 1.5. Authentication
+
+The authentication state works with many components (UI layer) &rarr; use **Redux** to easy to maintain and scale.
+
+![](./docs/images/state-mgt.svg)
+
+&nbsp;
+
+Workflow:
+
+![](./docs/images/state-mgt.svg)
+
+&nbsp;
+
 &copy; [huyphamfc](https://github.com/huyphamfc)
