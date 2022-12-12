@@ -244,4 +244,20 @@ To maintain and scale up the project in the future, we should organize and divid
 
 &nbsp;
 
+### 2.2. Authentication
+
+**Step 1: hash password**
+
+If passwords are kept in plain text and stored in the database, anyone with internal access or hackers who attack the database can see them. So we must convert the password into a complicated string using hashing algorithms.
+
+**Step 2: cookie**
+
+Cookie is a piece of data created by the server.
+
+Cookie store user identity and authenticity information that helps user can access resources from the server.
+
+![](./docs/images/cookie.svg)
+
+&nbsp;
+
 &copy; [huyphamfc](https://github.com/huyphamfc)
