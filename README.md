@@ -260,4 +260,19 @@ Cookie store user identity and authenticity information that helps user can acce
 
 &nbsp;
 
+### 2.3. API endpoints
+
+| HTTP method | API route               | Operation                         |
+| ----------- | ----------------------- | --------------------------------- |
+| POST        | /api/user/signup        | create an user account            |
+| POST        | /api/user/login         | login an user account             |
+| GET         | /api/user/logout        | logout an user account            |
+| GET         | /api/vocabulary/:lesson | get a specified vocabulary lesson |
+| GET         | /api/about              | get content for the landing page  |
+| GET         | /api/missions           | get content for the landing page  |
+| GET         | /api/products           | get content for the landing page  |
+| GET         | /api/testimonials       | get content for the landing page  |
+
+&nbsp;
+
 &copy; [huyphamfc](https://github.com/huyphamfc)
