@@ -228,4 +228,12 @@ Workflow:
 
 &nbsp;
 
+## 2. Server
+
+To maintain and scale up the project in the future, we should organize and divide code into different components based on **MVC architectural pattern**.
+
+![](./docs/images/mvc.svg)
+
+&nbsp;
+
 &copy; [huyphamfc](https://github.com/huyphamfc)
