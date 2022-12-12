@@ -236,4 +236,12 @@ To maintain and scale up the project in the future, we should organize and divid
 
 &nbsp;
 
+### 2.1. Design models
+
+&nbsp;
+
+![](./docs/images/models.svg)
+
+&nbsp;
+
 &copy; [huyphamfc](https://github.com/huyphamfc)
