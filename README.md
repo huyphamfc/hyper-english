@@ -275,4 +275,10 @@ Cookie store user identity and authenticity information that helps user can acce
 
 &nbsp;
 
-&copy; [huyphamfc](https://github.com/huyphamfc)
+## 3. Conclusion
+
+The aim of the project is to reinforce knowledge about the fundamental concepts of each technology in the MERN stack.
+
+&nbsp;
+
+Copyright &copy; [huyphamfc](https://github.com/huyphamfc)
