@@ -224,7 +224,7 @@ The authentication state works with many components (UI layer) &rarr; use **Redu
 
 Workflow:
 
-![](./docs/images/state-mgt.svg)
+![](./docs/images/auth-flow-chart.svg)
 
 &nbsp;
 
