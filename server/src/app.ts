@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 
 import { aboutRouter, missionRouter, testimonialRouter, lessonRouter, userRouter } from './routers';
 import { handleUnhandledRoute, handleGlobalError } from './middleware';
@@ -19,6 +20,10 @@ app.use(cors(corsOptions));
 app.use('/api', express.static('public'));
 
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
+
+app.use(express.json({ limit: '10kb' }));
+
+app.use(cookieParser());
 
 app.use('/api/about', aboutRouter);
 app.use('/api/missions', missionRouter);
