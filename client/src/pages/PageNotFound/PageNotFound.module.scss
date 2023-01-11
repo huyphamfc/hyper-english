@@ -1,0 +1,17 @@
+@use '../../assets/scss/abstracts' as ab;
+
+.page {
+  @include ab.flex(row, center, center);
+
+  min-height: 100vh;
+  padding: 3.2rem;
+
+  .page__content {
+    @include ab.flex(column, center, center, 1.8rem);
+  }
+
+  .page__img {
+    width: 240px;
+    height: 240px;
+  }
+}
