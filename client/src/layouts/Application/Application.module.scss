@@ -1,0 +1,57 @@
+@use '../../assets/scss/abstracts' as ab;
+@use '../../assets/scss/components/heading';
+@use '../../assets/scss/layouts/text';
+
+.application {
+  @extend %wrapper;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.8rem;
+
+  .application__img {
+    width: 240px;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .application__actions {
+    @include ab.flex(row, flex-start, center, 1.2rem);
+
+    padding: 1.8rem 0;
+  }
+
+  .heading {
+    padding-bottom: 2.4rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 40em) {
+  .application {
+    display: block;
+
+    text-align: center;
+
+    .application__img {
+      display: none;
+    }
+
+    .application__actions {
+      justify-content: center;
+    }
+
+    .heading {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 26em) {
+  .application {
+    .application__actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+}

@@ -4,5 +4,6 @@ export { default as About } from './About';
 export { default as Missions } from './Missions';
 export { default as Products } from './Products';
 export { default as Testimonials } from './Testimonials';
+export { default as Application } from './Application/Application';
 export { default as Features } from './Features/Features';
 export { default as Footer } from './Footer';
