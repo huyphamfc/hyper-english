@@ -1,0 +1,5 @@
+@use '../../../assets/scss/abstracts' as ab;
+
+.actions {
+  @include ab.flex(row, center, center, 1.8rem);
+}
