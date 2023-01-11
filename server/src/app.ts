@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import morgan from 'morgan';
+import cors from 'cors';
 
 import { aboutRouter, missionRouter, testimonialRouter, lessonRouter } from './routers';
 import { handleUnhandledRoute, handleGlobalError } from './middleware';
@@ -8,6 +9,12 @@ import { handleUnhandledRoute, handleGlobalError } from './middleware';
 dotenv.config();
 
 const app = express();
+
+const corsOptions = {
+  origin: process.env.CLIENT_URL,
+  credentials: true,
+};
+app.use(cors(corsOptions));
 
 app.use('/api', express.static('public'));
 
