@@ -1,0 +1,101 @@
+@use '../../assets/scss/abstracts' as ab;
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 999px;
+
+  transition: all 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    color: ab.$color-main;
+  }
+
+  .btn__icon {
+    & img {
+      height: 2.4rem;
+    }
+  }
+}
+
+.btn--solid,
+.btn--outline,
+.btn--white {
+  padding: 0.8rem 1.6rem;
+}
+
+.btn--solid {
+  background-color: ab.$color-main;
+  color: ab.$color-gray-very-light;
+
+  &:hover {
+    background-color: ab.$color-main-dark;
+    color: ab.$color-gray-very-light;
+  }
+}
+
+.btn--outline {
+  color: ab.$color-main;
+  border-color: ab.$color-main;
+
+  &:hover {
+    background-color: ab.$color-main-dark;
+    color: ab.$color-gray-very-light;
+    border-color: ab.$color-main-dark;
+  }
+}
+
+.btn--white {
+  background-color: ab.$color-gray-very-light;
+  color: ab.$color-gray;
+
+  &:hover {
+    color: ab.$color-gray-dark;
+  }
+}
+
+.btn--toggle {
+  width: 36px;
+  height: 36px;
+
+  display: none;
+
+  &:focus {
+    pointer-events: none;
+  }
+
+  &:focus ~ ul {
+    display: flex;
+  }
+}
+
+.btn--back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 998;
+
+  width: 44px;
+  height: 44px;
+
+  background-color: ab.$color-main-light;
+
+  box-shadow: 0 0 4px 0px #868e96;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: ab.$color-main;
+  }
+}
+
+@media (max-width: 38em) {
+  .btn--toggle {
+    display: block;
+  }
+}
