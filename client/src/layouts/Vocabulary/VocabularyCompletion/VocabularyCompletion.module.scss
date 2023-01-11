@@ -1,0 +1,27 @@
+@use '../../../assets/scss/abstracts' as ab;
+
+.completion {
+  @include ab.flex(column, center, center, 3.2rem);
+
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: ab.$color-gray-very-light;
+  transition: all 0.5s;
+
+  .completion__img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .completion__message {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  .completion__actions {
+    @include ab.flex(row, flex-start, center, 2.4rem);
+  }
+}
