@@ -6,6 +6,8 @@
   width: 280px;
 
   .form__notification {
+    @include ab.flex(row, flex-start, center, 0.8rem);
+
     grid-column: 1/-1;
 
     font-size: 1.4rem;

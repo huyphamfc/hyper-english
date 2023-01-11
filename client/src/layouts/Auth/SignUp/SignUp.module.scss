@@ -10,9 +10,9 @@
   }
 
   .form__notification {
-    grid-column: 1/-1;
-
     @include ab.flex(row, flex-start, center, 0.8rem);
+
+    grid-column: 1/-1;
 
     font-size: 1.4rem;
     color: ab.$color-error;
