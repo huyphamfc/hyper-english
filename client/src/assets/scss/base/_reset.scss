@@ -1,0 +1,44 @@
+@use '../abstracts' as ab;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: ab.$fs-default;
+  color: ab.$color-gray;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+a {
+  display: inline-block;
+}
+
+button {
+  font-size: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+input {
+  outline: none;
+}

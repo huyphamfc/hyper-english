@@ -1,0 +1,15 @@
+@use '../abstracts' as ab;
+
+.title {
+  font-size: 2.4rem;
+  padding: 2.4rem 0 1.2rem;
+}
+
+.paragraph {
+  font-size: 1.125 * ab.$fs-default;
+}
+
+.index {
+  font-weight: 700;
+  font-size: 4.8rem;
+}
