@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
-  name: String,
+  username: String,
   email: {
     type: String,
     lowercase: true,
@@ -18,15 +18,15 @@ const userSchema = new mongoose.Schema({
 userSchema.pre('save', async function (next) {
   if (this.isModified('password')) {
     this.password = await bcrypt.hash(this.password, 12);
-    this.passwordUpdateAt = Date.now() - 1000;
+    this.passwordUpdateAt = new Date(Date.now() - 1000);
   }
 
   next();
 });
 
-userSchema.method('verifyPassword', (inputPassword, databasePassword) =>
-  bcrypt.compare(inputPassword, databasePassword),
-);
+userSchema.method('checkPassword', async function (inputPassword) {
+  return await bcrypt.compare(inputPassword, this.password);
+});
 
 userSchema.method('isPasswordChange', function (decodedTimestamp) {
   return this.passwordUpdateAt.getTime() > decodedTimestamp * 1000;

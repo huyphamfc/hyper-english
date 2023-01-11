@@ -4,12 +4,10 @@ module.exports = {
     commonjs: true,
     es2021: true,
   },
-  extends: 'airbnb-base',
+  extends: 'eslint:recommended',
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
   },
-  rules: {
-    'no-console': 'off',
-  },
+  rules: {},
 };

@@ -1,65 +1,51 @@
 const dotenv = require('dotenv');
 const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
 const morgan = require('morgan');
-const limiter = require('express-rate-limit');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const helmet = require('helmet');
 
-const AppError = require('./utils/AppError');
-const handleGlobalError = require('./controllers/globalErrorController');
-const aboutRouter = require('./routers/aboutRouter');
-const missionRouter = require('./routers/missionRouter');
-const productRouter = require('./routers/productRouter');
-const testimonialRouter = require('./routers/testimonialRouter');
-const lessonRouter = require('./routers/lessonRouter');
-const vocabularyRouter = require('./routers/vocabularyRouter');
-const userRouter = require('./routers/userRouter');
+const aboutRouter = require('./routers/about.router');
+const missionRouter = require('./routers/mission.router');
+const testimonialRouter = require('./routers/testimonial.router');
+const lessonRouter = require('./routers/lesson.router');
+const userRouter = require('./routers/user.router');
+
+const handleUnhandledRoute = require('./middleware/unhandled-route-handler.middleware');
+const handleGlobalError = require('./middleware/global-error-handler.middleware');
 
 dotenv.config();
-
-const app = express();
 
 const corsOptions = {
   origin: process.env.CLIENT_URL,
   credentials: true,
 };
+
+const helmetOptions = {
+  crossOriginResourcePolicy: false,
+};
+
+const app = express();
+
 app.use(cors(corsOptions));
 
-app.use(
-  helmet({
-    crossOriginResourcePolicy: false,
-  }),
-);
+app.use(helmet(helmetOptions));
 
-app.use(
-  '/api',
-  limiter({
-    windowMs: 60 * 60 * 1000,
-    max: 100,
-    message: 'Too many requests from this IP. Try again later.',
-  }),
-);
+app.use('/api', express.static('public'));
+
+if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 
 app.use(express.json({ limit: '10kb' }));
 
 app.use(cookieParser());
 
-app.use('/api/public', express.static('public'));
-
-if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
-
 app.use('/api/about', aboutRouter);
 app.use('/api/missions', missionRouter);
-app.use('/api/products', productRouter);
 app.use('/api/testimonials', testimonialRouter);
 app.use('/api/lessons', lessonRouter);
-app.use('/api/vocabulary', vocabularyRouter);
 app.use('/api/user', userRouter);
 
-app.all('*', (req, res, next) => {
-  next(new AppError(404, `Cannot find ${req.originalUrl} on the server.`));
-});
+app.all('*', handleUnhandledRoute);
 
 app.use(handleGlobalError);
 

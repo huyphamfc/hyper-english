@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 
 const aboutSchema = new mongoose.Schema({
-  index: String,
+  index: {
+    type: String,
+    unique: true,
+  },
   title: String,
   content: String,
   imgSrc: String,
