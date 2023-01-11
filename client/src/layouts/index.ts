@@ -9,3 +9,4 @@ export { default as Features } from './Features/Features';
 export { default as Footer } from './Footer';
 export { default as Lessons } from './Lessons';
 export { default as Vocabulary } from './Vocabulary';
+export { default as Auth } from './Auth';

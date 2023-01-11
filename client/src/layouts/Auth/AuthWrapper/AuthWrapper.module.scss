@@ -1,0 +1,54 @@
+@use '../../../assets/scss/abstracts' as ab;
+
+.auth {
+  @include ab.flex(row, center, center);
+
+  min-height: 100vh;
+  padding: 3.6rem 0;
+  background-color: ab.$color-accent;
+  background-image: url('../../../assets/images/hero-section-bg.svg');
+
+  & a {
+    text-decoration: underline;
+  }
+
+  .auth__content {
+    max-width: 620px;
+
+    padding: 2.4rem;
+
+    background-color: ab.$color-gray-very-light;
+    border-radius: 8px;
+  }
+
+  .auth__brand {
+    font-size: 2.8rem;
+    text-align: center;
+
+    color: ab.$color-main;
+
+    padding: 3.6rem;
+  }
+}
+
+@media (max-width: 46em) {
+  .auth {
+    .auth__content {
+      max-width: 370px;
+    }
+  }
+}
+
+@media (max-width: 32em) {
+  .auth {
+    background-color: ab.$color-gray-very-light;
+  }
+}
+
+@media (max-width: 26em) {
+  .auth {
+    & button {
+      width: 100%;
+    }
+  }
+}
