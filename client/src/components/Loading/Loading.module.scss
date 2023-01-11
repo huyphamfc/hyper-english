@@ -1,0 +1,23 @@
+@use '../../assets/scss/abstracts' as ab;
+
+.loading {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: ab.$color-gray-very-light;
+  border-radius: 16px;
+
+  & img {
+    width: 24px;
+  }
+}
+
+.loading--large {
+  width: 100%;
+  min-height: 100vh;
+
+  & img {
+    width: 64px;
+  }
+}
