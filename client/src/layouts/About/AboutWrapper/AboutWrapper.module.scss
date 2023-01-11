@@ -1,0 +1,10 @@
+@use '../../../assets/scss/abstracts' as ab;
+@use '../../../assets/scss/components/heading';
+
+.about {
+  background-color: ab.$color-main;
+
+  .about__content {
+    @extend %wrapper;
+  }
+}
