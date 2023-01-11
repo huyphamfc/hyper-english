@@ -3,19 +3,27 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import helmet from 'helmet';
 
 import { aboutRouter, missionRouter, testimonialRouter, lessonRouter, userRouter } from './routers';
 import { handleUnhandledRoute, handleGlobalError } from './middleware';
 
 dotenv.config();
 
-const app = express();
-
 const corsOptions = {
   origin: process.env.CLIENT_URL,
   credentials: true,
 };
+
+const helmetOptions = {
+  crossOriginResourcePolicy: false,
+};
+
+const app = express();
+
 app.use(cors(corsOptions));
+
+app.use(helmet(helmetOptions));
 
 app.use('/api', express.static('public'));
 
