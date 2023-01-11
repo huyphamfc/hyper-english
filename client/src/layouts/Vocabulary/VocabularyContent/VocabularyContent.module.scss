@@ -1,0 +1,8 @@
+@use '../../../assets/scss/abstracts' as ab;
+@use '../../../assets/scss/components/error';
+
+.vocabulary {
+  @extend %wrapper;
+  @include ab.flex(column, space-between, stretch, 2.4rem);
+  min-height: 100vh;
+}
