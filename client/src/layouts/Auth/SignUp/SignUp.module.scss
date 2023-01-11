@@ -1,0 +1,32 @@
+@use '../../../assets/scss/abstracts' as ab;
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+
+  & button {
+    justify-self: flex-start;
+  }
+
+  .form__notification {
+    grid-column: 1/-1;
+
+    @include ab.flex(row, flex-start, center, 0.8rem);
+
+    font-size: 1.4rem;
+    color: ab.$color-error;
+
+    padding: 1.2rem 0;
+  }
+}
+
+.action {
+  padding: 1.8rem 0;
+}
+
+@media (max-width: 46em) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}
