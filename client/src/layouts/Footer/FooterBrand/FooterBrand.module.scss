@@ -1,0 +1,23 @@
+@use '../../../assets/scss/abstracts' as ab;
+
+.footer {
+  grid-area: brand;
+
+  .footer__heading {
+    font-size: 3.2rem;
+    color: ab.$color-main;
+  }
+
+  .footer__items {
+    @include ab.flex(row, flex-start, center, 1.8rem);
+    padding: 1.8rem 0 1.2rem;
+  }
+
+  a {
+    color: ab.$color-main;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
