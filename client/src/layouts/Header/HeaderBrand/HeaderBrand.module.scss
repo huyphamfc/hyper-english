@@ -1,0 +1,6 @@
+@use '../../../assets/scss/abstracts' as ab;
+
+.brand {
+  font-size: 2.8rem;
+  color: ab.$color-main;
+}
