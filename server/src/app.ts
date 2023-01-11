@@ -3,7 +3,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 
-import { aboutRouter, missionRouter, testimonialRouter, lessonRouter } from './routers';
+import { aboutRouter, missionRouter, testimonialRouter, lessonRouter, userRouter } from './routers';
 import { handleUnhandledRoute, handleGlobalError } from './middleware';
 
 dotenv.config();
@@ -24,6 +24,7 @@ app.use('/api/about', aboutRouter);
 app.use('/api/missions', missionRouter);
 app.use('/api/testimonials', testimonialRouter);
 app.use('/api/lessons', lessonRouter);
+app.use('/api/user', userRouter);
 
 app.all('*', handleUnhandledRoute);
 
