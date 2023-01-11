@@ -1,0 +1,10 @@
+@use '../../../assets/scss/abstracts' as ab;
+@use '../../../assets/scss/components';
+
+.testimonials {
+  background-color: ab.$color-main;
+
+  .testimonials__content {
+    @extend %wrapper;
+  }
+}
