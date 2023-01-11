@@ -1,0 +1,43 @@
+@use '../../../assets/scss/abstracts' as ab;
+
+.testimonial {
+  position: relative;
+  max-width: 280px;
+
+  flex-shrink: 0;
+
+  margin: 1.8rem;
+  padding: 3.6rem 1.8rem;
+
+  background-color: ab.$color-gray-very-light;
+  border-radius: 16px;
+
+  .testimonial__avatar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 72px;
+    height: 72px;
+
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .testimonial__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .testimonial__quote {
+    height: 240px;
+    overflow: hidden;
+
+    padding: 1.8rem 0;
+  }
+
+  .testimonial__author {
+    font-style: italic;
+  }
+}
