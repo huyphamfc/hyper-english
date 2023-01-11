@@ -26,7 +26,12 @@ const login = catchAsyncError(async (req, res) => {
 });
 
 const logout = catchAsyncError(async (req, res) => {
-  res.clearCookie('jwt');
+  res.cookie('jwt', '', {
+    expires: new Date(1),
+    httpOnly: true,
+    secure: true,
+    sameSite: 'none',
+  });
 
   res.status(200).json({
     status: 'success',
