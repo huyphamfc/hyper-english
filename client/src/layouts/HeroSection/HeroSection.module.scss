@@ -1,0 +1,64 @@
+@use '../../assets/scss/abstracts' as ab;
+
+.hero {
+  background-color: ab.$color-accent;
+  background-image: url('../../assets/images/hero-section-bg.svg');
+
+  .hero__content {
+    @extend %wrapper;
+
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    align-items: center;
+    padding: 5.2rem 2.4rem;
+  }
+
+  .hero__text {
+    @include ab.flex(column, flex-start, flex-start, 2.4rem);
+    color: ab.$color-gray-very-light;
+  }
+
+  .hero__heading {
+    font-size: clamp(3.2rem, 4vw, 5.2rem);
+  }
+
+  .hero__paragraph {
+    font-size: clamp(1.8rem, 2vw, 2.2rem);
+  }
+
+  .hero__actions {
+    @include ab.flex(row, flex-start, center, 1.2rem);
+  }
+}
+
+@media (max-width: 38em) {
+  .hero {
+    .hero__content {
+      grid-template-columns: 1fr;
+    }
+
+    .hero__text {
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero__img {
+      grid-row: 1;
+      justify-self: center;
+    }
+  }
+}
+
+@media (max-width: 26em) {
+  .hero {
+    .hero__actions {
+      width: 100%;
+
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+}
