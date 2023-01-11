@@ -1,0 +1,29 @@
+@use '../../../assets/scss/abstracts' as ab;
+
+.vocabulary {
+  @include ab.flex(column, flex-start, stretch, 1.8rem);
+  font-size: 1.8rem;
+  text-align: center;
+
+  .vocabulary__word {
+    font-size: 4.8rem;
+    color: ab.$color-main;
+  }
+
+  .vocabulary__pronunciation {
+    @include ab.flex(row, center, center, 0.8rem);
+    color: ab.$color-accent;
+  }
+
+  .vocabulary__meaning {
+    font-weight: 500;
+  }
+
+  .vocabulary__example {
+    font-style: italic;
+  }
+
+  .vocabulary__icon {
+    width: 18px;
+  }
+}
