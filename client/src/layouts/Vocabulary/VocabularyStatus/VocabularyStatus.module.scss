@@ -1,0 +1,19 @@
+@use '../../../assets/scss/abstracts' as ab;
+
+.status {
+  @include ab.flex(row, space-between, center, 1.8rem);
+
+  .status__process {
+    flex-grow: 1;
+    height: 12px;
+
+    background-color: ab.$color-gray-light;
+    border-radius: 999px;
+  }
+
+  .status__process-inner {
+    height: 100%;
+    background-color: ab.$color-main;
+    border-radius: 999px;
+  }
+}
