@@ -160,3 +160,35 @@ root/
     ├── app.ts
     └── index.ts
 ```
+
+&nbsp;
+
+## 2. Building UI
+
+To reuse variables (fonts, colors,...) and blocks of CSS properties, I use `SCSS` and `SCSS Modules` to style HTML elements.
+
+&nbsp;
+
+Row of boxes layout:
+
+![](./docs/UI/row-of-boxes-layout.svg)
+
+&nbsp;
+
+Call to action layout:
+
+![](./docs/UI/call-to-action-layout.svg)
+
+&nbsp;
+
+Z-pattern layout:
+
+![](./docs/UI/z-pattern-layout.svg)
+
+&nbsp;
+
+Grid of boxes layout:
+
+![](./docs/UI/grid-of-boxes-layout.svg)
+
+&nbsp;
