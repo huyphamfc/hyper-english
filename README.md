@@ -13,15 +13,15 @@ Technology stack: &nbsp;
 
 Dependencies:
 
-Client: &nbsp;
-<a href='https://sass-lang.com/'><img height='24px' src='./docs/images/tech-sass.svg' /></a>&nbsp;
-<a href='https://react-hook-form.com/'><img height='24px' src='./docs/images/tech-react-hook-form.png' /></a>&nbsp;
-<a href='https://reactrouter.com/en/main'><img height='24px' src='./docs/images/tech-react-router.svg' /></a>&nbsp;
-<a href='https://redux-toolkit.js.org/'><img height='24px' src='./docs/images/tech-redux.svg' /></a>&nbsp;
+- Client: &nbsp;
+  <a href='https://sass-lang.com/'><img height='24px' src='./docs/images/tech-sass.svg' /></a>&nbsp;
+  <a href='https://react-hook-form.com/'><img height='24px' src='./docs/images/tech-react-hook-form.png' /></a>&nbsp;
+  <a href='https://reactrouter.com/en/main'><img height='24px' src='./docs/images/tech-react-router.svg' /></a>&nbsp;
+  <a href='https://redux-toolkit.js.org/'><img height='24px' src='./docs/images/tech-redux.svg' /></a>&nbsp;
 
-Server: &nbsp;
-<a href='https://mongoosejs.com/'><img height='24px' src='./docs/images/tech-mongoose.png' /></a>&nbsp;
-<a href='https://jwt.io/'><img height='24px' src='./docs/images/tech-jwt.svg' /></a>&nbsp;
+- Server: &nbsp;
+  <a href='https://mongoosejs.com/'><img height='24px' src='./docs/images/tech-mongoose.png' /></a>&nbsp;
+  <a href='https://jwt.io/'><img height='24px' src='./docs/images/tech-jwt.svg' /></a>&nbsp;
 
 [Link Demo](https://fe-hyper-english.onrender.com/)
 
@@ -32,3 +32,131 @@ Server: &nbsp;
 **HyperEnglish** is English vocabulary series that are suitable for students and teachers in Information Technology.
 
 I use this project to get my first job as `Fresher FrontEnd Developer`.
+
+&nbsp;
+
+## 1. Quick Overview
+
+![](./docs/images/overview.png)
+
+&nbsp;
+
+Project architect:
+
+![](./docs/flowcharts/overview-architecture.svg)
+
+&nbsp;
+
+Project structure:
+
+```text
+root/
+├── client/
+│   ├── public/
+│   ├── src/
+|   |   ├── assets/
+|   |   |   ├── scss/
+|   |   |   └── ....
+|   |   |
+|   |   ├── components/
+|   |   |   ├── GlobalStyles/
+|   |   |   ├── Button/
+|   |   |   ├── Loading/
+|   |   |   ├── DataConsuming/
+|   |   │   └── index.ts
+|   |   |
+|   |   ├── hooks/
+|   |   |   ├── useFetch.ts
+|   |   |   ├── useAppSelector.ts
+|   |   |   ├── useAppDispatch.ts
+|   |   │   └── index.ts
+|   |   |
+|   |   ├── layouts/
+|   |   |   ├── About/
+|   |   |   ├── Application/
+|   |   |   ├── Auth/
+|   |   |   ├── Features/
+|   |   |   ├── Footer/
+|   |   |   ├── Header/
+|   |   |   ├── HeroSection/
+|   |   |   ├── Lessons/
+|   |   |   ├── Missions/
+|   |   |   ├── Products/
+|   |   |   ├── Testimonials/
+|   |   |   ├── Vocabulary/
+|   |   │   └── index.ts
+|   |   |
+|   |   ├── models/
+|   |   |   ├── about-item.ts
+|   |   |   ├── lesson-item.ts
+|   |   |   ├── mission-item.ts
+|   |   |   ├── product-item.ts
+|   |   |   ├── testimonial-item.ts
+|   |   |   ├── vocabulary-item.ts
+|   |   │   └── index.ts
+|   |   |
+|   |   ├── pages/
+|   |   |   ├── Home/
+|   |   |   ├── Lessons/
+|   |   |   ├── PageNotFound/
+|   |   │   └── index.ts
+|   |   |
+|   |   ├── routes/
+|   |   │   └── index.ts
+|   |   |
+|   |   └── store/
+|   |       ├── authSlice.ts
+|   |       ├── store.ts
+|   |       └── index.ts
+|   |
+│   ├── App.tsx
+|   └── index.tsx
+|
+|
+└── server/
+    ├── public/
+    ├── src/
+    |   ├── config/
+    |   |   ├── db.config.ts
+    |   |   ├── env.config.ts
+    |   |   └── index.ts
+    |   |
+    |   ├── controllers/
+    |   |   ├── auth.controller.ts
+    |   |   ├── about.controller.ts
+    |   |   ├── lesson.controller.ts
+    |   |   ├── mission.controller.ts
+    |   |   ├── testimonial.controller.ts
+    |   |   └── index.ts
+    |   |
+    |   ├── middleware/
+    |   |   ├── global-error-handler.middleware.ts
+    |   |   ├── unhandled-route-handler.middleware.ts
+    |   |   └── index.ts
+    |   |
+    |   ├── models/
+    |   |   ├── about.model.ts
+    |   |   ├── lesson.model.ts
+    |   |   ├── mission.model.ts
+    |   |   ├── testimonial.model.ts
+    |   |   ├── user.model.ts
+    |   |   └── index.ts
+    |   |
+    |   ├── routers/
+    |   |   ├── user.router.ts
+    |   |   ├── about.router.ts
+    |   |   ├── lesson.router.ts
+    |   |   ├── mission.router.ts
+    |   |   ├── testimonial.router.ts
+    |   |   └── index.ts
+    |   |
+    |   └── utils/
+    |       ├── AppError.ts
+    |       ├── catchAsyncError.ts
+    |       ├── sendCookie.ts
+    |       ├── sendData.ts
+    |       └── index.ts
+    |
+    ├── app.ts
+    └── index.ts
+```
