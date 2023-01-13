@@ -327,3 +327,222 @@ Workflow:
 ![](./docs/flowcharts/design-auth-workflow.svg)
 
 &nbsp;
+
+## 4. Building Express App
+
+To maintain and scale up the project in the future, we should organize and divide the code into different components based on **MVC architectural pattern**.
+
+&nbsp;
+
+![](./docs/flowcharts/server-mvc.svg)
+
+&nbsp;
+
+### 4.1. Database
+
+Use Mongoose and MongoDB for the project.
+
+**HyperEnglish** website stores information about vocabulary (word, pronunciation, meaning, example), lessons (lesson number, title, content, ...), and users (username, email, password).
+
+&nbsp;
+
+### 4.2. Design models
+
+I choose **embedded documents** because data (user, lessons, vocabulary get in 1 query and more reading than writing.
+
+&nbsp;
+
+![](./docs/flowcharts/server-models.svg)
+
+&nbsp;
+
+### 4.3. Authentication
+
+**Step 1: hash password**
+
+If passwords are kept in plain text and stored in the database, anyone with internal access or hackers who attack the database can see them. So we must convert the password into a complicated string using hashing algorithms.
+
+**Step 2: cookie**
+
+Cookie is a piece of data created by the server.
+
+Cookie store user identity and authenticity information that helps user can access resources from the server.
+
+&nbsp;
+
+![](./docs/flowcharts/server-cookie.svg)
+
+&nbsp;
+
+#### 4.4. API Endpoints
+
+The **HyperEnglish API** contains endpoints for About, Missions, Testimonials, Lessons, and Users.
+
+&nbsp;
+
+**GET &nbsp; About**
+
+Use this endpoint to get all `About` content.
+
+```text
+{{BASE_URL}}/api/about
+```
+
+Example request:
+
+```ts
+fetch('{{BASE_URL}}/api/about')
+  .then((response) => response.json())
+  .then((result) => console.log(result))
+  .catch((error) => console.log('error', error));
+```
+
+&nbsp;
+
+**GET &nbsp; Missions**
+
+Use this endpoint to get all `Missions` content.
+
+```text
+{{BASE_URL}}/api/missions
+```
+
+Example request:
+
+```ts
+fetch('{{BASE_URL}}/api/missions')
+  .then((response) => response.json())
+  .then((result) => console.log(result))
+  .catch((error) => console.log('error', error));
+```
+
+&nbsp;
+
+**GET &nbsp; Lessons**
+
+Use this endpoint to get all `Lessons` content.
+
+```text
+{{BASE_URL}}/api/lessons
+```
+
+Example request:
+
+```ts
+fetch('{{BASE_URL}}/api/lessons')
+  .then((response) => response.json())
+  .then((result) => console.log(result))
+  .catch((error) => console.log('error', error));
+```
+
+&nbsp;
+
+**GET &nbsp; Vocabulary**
+
+Use this endpoint to get all `Vocabulary` content but the user must login to access.
+
+```text
+{{BASE_URL}}/api/lessons/:lessonNumber
+```
+
+Example request:
+
+```ts
+const requestOptions = {
+  method: 'GET',
+  credentials: 'include',
+};
+
+fetch('{{BASE_URL}}/api/lessons/:lessonNumber', requestOptions)
+  .then((response) => response.json())
+  .then((result) => console.log(result))
+  .catch((error) => console.log('error', error));
+```
+
+&nbsp;
+
+**POST &nbsp; SignUp**
+
+Use this endpoint to create an account.
+
+```text
+{{BASE_URL}}/api/user/signup
+```
+
+BODY raw
+
+```text
+{
+  "username": <your-name>,
+  "email": <your-email>,
+  "password": <your-password>
+}
+```
+
+Example request:
+
+```ts
+const payload = {
+  username: 'your-name',
+  email: 'your-email',
+  password: 'your-password',
+};
+
+const requestOptions = {
+  method: 'POST',
+  credentials: 'include',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ ...payload }),
+};
+
+fetch('{{BASE_URL}}/api/user/signup', requestOptions)
+  .then((response) => response.json())
+  .then((result) => console.log(result))
+  .catch((error) => console.log('error', error));
+```
+
+&nbsp;
+
+**POST &nbsp; Login**
+
+Use this endpoint to login.
+
+```text
+{{BASE_URL}}/api/user/login
+```
+
+BODY raw
+
+```text
+{
+  "email": <your-email>,
+  "password": <your-password>
+}
+```
+
+Example request:
+
+```ts
+const payload = {
+  email: 'your-email',
+  password: 'your-password',
+};
+
+const requestOptions = {
+  method: 'POST',
+  credentials: 'include',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ ...payload }),
+};
+
+fetch('{{BASE_URL}}/api/user/login', requestOptions)
+  .then((response) => response.json())
+  .then((result) => console.log(result))
+  .catch((error) => console.log('error', error));
+```
+
+&nbsp;
