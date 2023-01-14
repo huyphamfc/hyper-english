@@ -348,7 +348,7 @@ Use Mongoose and MongoDB for the project.
 
 ### 4.2. Design models
 
-I choose **embedded documents** because data (user, lessons, vocabulary get in 1 query and more reading than writing.
+I choose **embedded documents** because data (user, lessons, vocabulary) get in 1 query and more reading than writing.
 
 &nbsp;
 
@@ -546,3 +546,11 @@ fetch('{{BASE_URL}}/api/user/login', requestOptions)
 ```
 
 &nbsp;
+
+## 5. Conclusion
+
+The aim of the project is to reinforce knowledge about the fundamental concepts of each technology in the MERN stack.
+
+&nbsp;
+
+Copyright &copy; [huyphamfc](https://github.com/huyphamfc)
